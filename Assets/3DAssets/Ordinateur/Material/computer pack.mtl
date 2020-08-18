@@ -1,0 +1,771 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 30.09.2019 16:24:52
+
+newmtl wire_028028177
+	Ns 32
+	d 1
+	Tr 0
+	Tf 1 1 1
+	illum 2
+	Ka 0.1098 0.1098 0.6941
+	Kd 0.1098 0.1098 0.6941
+	Ks 0.3500 0.3500 0.3500
+
+newmtl klothh_XSIPOLYCLS_klothh_material
+	Ns 34.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0045 0.0045 0.0045
+	Ke 0.0000 0.0000 0.0000
+	map_Ka Map__13_Color_Correction.tga
+	map_Kd Map__13_Color_Correction.tga
+	map_d C:\Users\MHT\Desktop\max_casper_urunler\sessistemi\clothh.jpg
+
+newmtl Default_XSIPOLYCLS_default_material
+	Ns 500.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.3000 0.3000 0.3000
+	Kd 0.7000 0.7000 0.7000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl logoo_XSIPOLYCLS_logoo_material
+	Ns 500.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.3000 0.3000 0.3000
+	Kd 0.7000 0.7000 0.7000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\MHT\Desktop\max_casper_urunler\urunler\sesistemi\logoo.jpg
+	map_Kd C:\Users\MHT\Desktop\max_casper_urunler\urunler\sesistemi\logoo.jpg
+
+newmtl metalikkplastik_XSIPOLYCLS_metalikkplastik_material
+	Ns 500.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.3000 0.3000 0.3000
+	Kd 0.7000 0.7000 0.7000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl delikli_XSIPOLYCLS_delikli_material
+	Ns 34.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0045 0.0045 0.0045
+	Ke 0.0000 0.0000 0.0000
+	map_Ka Map__13_Color_Correction.tga
+	map_Kd Map__13_Color_Correction.tga
+	map_d C:\Users\MHT\Desktop\max_casper_urunler\sessistemi\clothh.jpg
+
+newmtl logooo2_XSIPOLYCLS_logooo2_material
+	Ns 500.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.3000 0.3000 0.3000
+	Kd 0.7000 0.7000 0.7000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\MHT\Desktop\max_casper_urunler\urunler\sesistemi\logo2.jpg
+	map_Kd C:\Users\MHT\Desktop\max_casper_urunler\urunler\sesistemi\logo2.jpg
+
+newmtl yazilar_XSIPOLYCLS_yazilar_material
+	Ns 500.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.3000 0.3000 0.3000
+	Kd 0.7000 0.7000 0.7000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\MHT\Desktop\max_casper_urunler\urunler\sesistemi\sesacmakapama.jpg
+	map_Kd C:\Users\MHT\Desktop\max_casper_urunler\urunler\sesistemi\sesacmakapama.jpg
+
+newmtl wire_088177027
+	Ns 32
+	d 1
+	Tr 0
+	Tf 1 1 1
+	illum 2
+	Ka 0.3451 0.6941 0.1059
+	Kd 0.3451 0.6941 0.1059
+	Ks 0.3500 0.3500 0.3500
+
+newmtl 03___Default
+	Ns 26.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.4275 0.4275 0.4275
+	Kd 0.4275 0.4275 0.4275
+	Ks 0.5040 0.5040 0.5040
+	Ke 0.0000 0.0000 0.0000
+
+newmtl 07___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.7804 0.1765 0.1765
+	Kd 0.7804 0.1765 0.1765
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl 08___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl 09___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl 14___Default
+	Ns 5.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.5130 0.5130 0.5130
+	Ke 0.0000 0.0000 0.0000
+
+newmtl wire_204204204
+	Ns 32
+	d 1
+	Tr 0
+	Tf 1 1 1
+	illum 2
+	Ka 0.8000 0.8000 0.8000
+	Kd 0.8000 0.8000 0.8000
+	Ks 0.3500 0.3500 0.3500
+
+newmtl blinn3
+	Ns 26.7807
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0826 0.0826 0.0826
+	Ks 0.4298 0.4298 0.4298
+	Ke 0.0000 0.0000 0.0000
+	map_refl Map__4_Reflect_Refract.tga
+
+newmtl kulaklik_pilastik2
+	Ns 26.7807
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5207 0.5207 0.5207
+	Ks 0.7521 0.7521 0.7521
+	Ke 0.0000 0.0000 0.0000
+	map_refl Map__2_Reflect_Refract.tga
+
+newmtl beyaz
+	Ns 26.7807
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 1.0000 1.0000 1.0000
+	Ks 0.3719 0.3719 0.3719
+	Ke 0.0000 0.0000 0.0000
+	map_refl Map__2_Reflect_Refract.tga
+
+newmtl modem_06_fdfddf1
+	Ns 43.2193
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5000 0.5000 0.5000
+	Ks 0.5000 0.5000 0.5000
+	Ke 0.0000 0.0000 0.0000
+	map_refl Map__1_Reflect_Refract.tga
+
+newmtl camm
+	Ns 26.7807
+	Ni 1.5000
+	d 0.3500
+	Tr 0.6500
+	Tf 0.3500 0.3500 0.3500 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.1090 0.1090 0.1090
+	Ks 0.4463 0.4463 0.4463
+	Ke 0.0000 0.0000 0.0000
+	map_refl Map__3_Reflect_Refract.tga
+
+newmtl metal_yazili1
+	Ns 26.7807
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.5455 0.5455 0.5455
+	Ks 0.8017 0.8017 0.8017
+	Ke 0.0000 0.0000 0.0000
+	map_refl Map__6_Reflect_Refract.tga
+
+newmtl blinn6
+	Ns 26.7807
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 1.0000 1.0000 1.0000
+	Ks 0.2645 0.2645 0.2645
+	Ke 0.0000 0.0000 0.0000
+	map_refl Map__7_Reflect_Refract.tga
+
+newmtl blinn9
+	Ns 26.7807
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.1405 0.1405 0.1405
+	Ks 0.6942 0.6942 0.6942
+	Ke 0.0000 0.0000 0.0000
+	map_refl Map__8_Reflect_Refract.tga
+
+newmtl Material__248
+	Ns 26.7807
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 1.0000 1.0000 1.0000
+	Ks 0.2479 0.2479 0.2479
+	Ke 0.0000 0.0000 0.0000
+	map_refl Map__9_Reflect_Refract.tga
+
+newmtl metal_yazili
+	Ns 26.7807
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 1.0000 1.0000 1.0000
+	Ks 0.8760 0.8760 0.8760
+	Ke 0.0000 0.0000 0.0000
+	map_refl Map__4_Reflect_Refract.tga
+
+newmtl logo
+	Ns 26.7807
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 1.0000 1.0000 1.0000
+	Ks 0.5000 0.5000 0.5000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\MHT\Desktop\max_casper_urunler\kablolu modem\logoy.jpg
+	map_Kd C:\Users\MHT\Desktop\max_casper_urunler\kablolu modem\logoy.jpg
+	map_refl Map__10_Reflect_Refract.tga
+
+newmtl wire_006135006
+	Ns 32
+	d 1
+	Tr 0
+	Tf 1 1 1
+	illum 2
+	Ka 0.0235 0.5294 0.0235
+	Kd 0.0235 0.5294 0.0235
+	Ks 0.3500 0.3500 0.3500
+
+newmtl 06___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.6392 0.6392 0.6392
+	Kd 0.6392 0.6392 0.6392
+	Ks 0.3690 0.3690 0.3690
+	Ke 0.0000 0.0000 0.0000
+
+newmtl 03___De55fault001
+	Ns 9.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0392 0.0392 0.0392
+	Kd 0.0392 0.0392 0.0392
+	Ks 0.5310 0.5310 0.5310
+	Ke 0.0000 0.0000 0.0000
+
+newmtl 10___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl scene_material
+	Ns 500.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.7250 0.7250 0.7250
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl material8
+	Ns 500.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0750 0.0750 0.0750
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl cammm1_XSIPOLYCLS_cammm1
+	Ns 630.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.3000 0.3000 0.3000
+	Kd 0.1412 0.1490 0.1843
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl syah_plastik_XSIPOLYCLS_syah_plastik
+	Ns 630.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.3000 0.3000 0.3000
+	Kd 0.1610 0.1610 0.1610
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl kulaklik_giris_XSIPOLYCLS_material32
+	Ns 500.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.3000 0.3000 0.3000
+	Kd 1.0000 1.0000 1.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl metal_XSIPOLYCLS_material27
+	Ns 500.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.3000 0.3000 0.3000
+	Kd 0.2080 0.2080 0.2080
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl mikrofon_giris_XSIPOLYCLS_mikrofon_giris
+	Ns 1280.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.3000 0.3000 0.3000
+	Kd 0.9529 0.5216 0.5216
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl plastik_normal_XSIPOLYCLS_plastik_normal
+	Ns 500.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.1060 0.1060 0.1060
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl material18
+	Ns 500.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.0000 0.0000 0.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl Material__393
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl material3
+	Ns 9.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.7000 0.7000 0.7000
+	Ks 0.4100 0.4100 0.4100
+	Ke 0.0000 0.0000 0.0000
+
+newmtl material10
+	Ns 500.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.3370 0.3370 0.3370
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl scene_material1
+	Ns 500.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.7250 0.7250 0.7250
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl material24
+	Ns 500.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.6392 0.6392 0.6392
+	Kd 0.6392 0.6392 0.6392
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl material25
+	Ns 500.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.1140 0.0200 0.0200
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl material4
+	Ns 500.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.7000 0.7000 0.7000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl default1sg
+	Ns 300.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.8000 0.8000 0.8000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl 03___De55fault00122
+	Ns 9.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0392 0.0392 0.0392
+	Kd 0.0392 0.0392 0.0392
+	Ks 0.5310 0.5310 0.5310
+	Ke 0.0000 0.0000 0.0000
+
+newmtl default1sg1
+	Ns 300.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.8000 0.8000 0.8000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl material16
+	Ns 500.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.6860 0.6860 0.6860
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\MHT\Desktop\max_casper_urunler\kasa_klavye\klavyeust_teexture_color.jpg
+	map_Kd C:\Users\MHT\Desktop\max_casper_urunler\kasa_klavye\klavyeust_teexture_color.jpg
+
+newmtl Material__1030
+	Ns 500.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.3000 0.3000 0.3000
+	Kd 0.7000 0.7000 0.7000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl material15
+	Ns 500.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.7000 0.7000 0.7000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\MHT\Desktop\max_casper_urunler\kasa_klavye\tustakimi_dne2.jpg
+	map_Kd C:\Users\MHT\Desktop\max_casper_urunler\kasa_klavye\tustakimi_dne2.jpg
+
+newmtl Default
+	Ns 61.4931
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.8000 0.8000 0.8000
+	Ks 0.2000 0.2000 0.2000
+	Ke 0.0000 0.0000 0.0000
+	map_refl Map__16_Reflect_Refract.tga
+
+newmtl Material__1056
+	Ns 27.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.1373 0.1373 0.1373
+	Kd 0.1373 0.1373 0.1373
+	Ks 0.2610 0.2610 0.2610
+	Ke 0.0000 0.0000 0.0000
+
+newmtl wire_087225143
+	Ns 32
+	d 1
+	Tr 0
+	Tf 1 1 1
+	illum 2
+	Ka 0.3412 0.8824 0.5608
+	Kd 0.3412 0.8824 0.5608
+	Ks 0.3500 0.3500 0.3500
+
+newmtl alt
+	Ns 10000.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 1.0000 1.0000 1.0000
+	Kd 1.0000 1.0000 1.0000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl 13___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.1843 0.2078 0.2471
+	Kd 0.1843 0.2078 0.2471
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl monutor_kasa_computter_blinn4
+	Ns 26.7807
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.7582 0.9740 0.2192
+	Ks 0.5000 0.5000 0.5000
+	Ke 0.0000 0.0000 0.0000
+	map_refl Map__8_Reflect_Refract.tga
+
+newmtl monutor_kasa_computter_anisotropic2
+	Ns 26.7807
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.2821 0.2821 0.2821
+	Ks 0.5000 0.5000 0.5000
+	Ke 0.0000 0.0000 0.0000
+	map_refl Map__2_Reflect_Refract.tga
+
+newmtl monutor_kasa_makineler_anisotropic4
+	Ns 26.7807
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.2821 0.2821 0.2821
+	Ks 0.5000 0.5000 0.5000
+	Ke 0.0000 0.0000 0.0000
+	map_refl Map__3_Reflect_Refract.tga
+
+newmtl webcam_webcam07_blinn2
+	Ns 26.7807
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 1.0000 1.0000 1.0000
+	Ks 0.5000 0.5000 0.5000
+	Ke 0.0000 0.0000 0.0000
+	map_refl Map__8_Reflect_Refract.tga
+
+newmtl webcam_hepsi02_lambert2
+	Ns 26.7807
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 1.0000 1.0000 0.7280
+	Ks 0.2000 0.2000 0.2000
+	Ke 0.0000 0.0000 0.0000
+	map_refl Map__9_Reflect_Refract.tga

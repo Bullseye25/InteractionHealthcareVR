@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{ADDC2BED-D618-0156-ED45-9B5B54A6E578}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/StepController.cs">
+    <Files>
+      <File FileName="Assets/Scripts/MoveTo.cs" Line="29" Column="12" />
+      <File FileName="Assets/Scripts/StepController.cs" Line="7" Column="39" />
+      <File FileName="Assets/Scripts/EventSystem/StepsManager.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="InteractionHealthcareVR" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="EventSystem" expanded="True" />
+                <Node name="StepController.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9a702cd7-a5d6-4653-984e-6d773cc17d0d" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
