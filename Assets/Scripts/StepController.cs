@@ -12,20 +12,20 @@ public class StepController : MonoBehaviour
         stepsManager = StepsManager.Instance;
     }
 
-    void Update()
-    {
-        var pressed = WaveVR_Controller.Input(WaveVR_Controller.EDeviceType.Dominant).GetPressDown(wvr.WVR_InputId.WVR_InputId_Alias1_Trigger);
+    //void Update()
+    //{
+    //    var pressed = WaveVR_Controller.Input(WaveVR_Controller.EDeviceType.Dominant).GetPressDown(wvr.WVR_InputId.WVR_InputId_Alias1_Trigger);
 
-        if (pressed)
-        {
-            stepsManager.NextStep();
-        }
+    //    if (pressed)
+    //    {
+    //        stepsManager.NextStep();
+    //    }
 
-        var reset = WaveVR_Controller.Input(WaveVR_Controller.EDeviceType.Dominant).GetPressDown(wvr.WVR_InputId.WVR_InputId_Alias1_Touchpad);
+    //    var reset = WaveVR_Controller.Input(WaveVR_Controller.EDeviceType.Dominant).GetPressDown(wvr.WVR_InputId.WVR_InputId_Alias1_Touchpad);
 
-        if (reset)
-        {
-            SceneManager.LoadScene(0);
-        }
-    }
+    //    if (reset)
+    //    {
+    //        SceneManager.LoadScene(0);
+    //    }
+    //}
 }

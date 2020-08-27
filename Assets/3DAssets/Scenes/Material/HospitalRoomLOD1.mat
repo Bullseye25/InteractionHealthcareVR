@@ -90,8 +90,8 @@ Material:
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
-    - _AmbientColor: {r: 1, g: 1, b: 1, a: 0}
+    - _AmbientColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DirectionnalColor: {r: 0, g: 0, b: 0, a: 0}
-    - _ElectricColor: {r: 4, g: 4, b: 4, a: 0}
+    - _ElectricColor: {r: 6.0077085, g: 6.0077085, b: 6.0077085, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

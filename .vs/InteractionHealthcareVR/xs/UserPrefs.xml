@@ -1,9 +1,15 @@
 ﻿<Properties StartupConfiguration="{ADDC2BED-D618-0156-ED45-9B5B54A6E578}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/StepController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MediaPlayer/AudioMediaPlayer.cs">
     <Files>
       <File FileName="Assets/Scripts/MoveTo.cs" Line="29" Column="12" />
-      <File FileName="Assets/Scripts/StepController.cs" Line="7" Column="39" />
-      <File FileName="Assets/Scripts/EventSystem/StepsManager.cs" />
+      <File FileName="Assets/Scripts/StepController.cs" Line="12" Column="46" />
+      <File FileName="Assets/Scripts/EventSystem/StepsManager.cs" Line="17" Column="1" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="12" Column="34" />
+      <File FileName="Assets/Scripts/EventSystem/Fader.cs" Line="16" Column="55" />
+      <File FileName="Assets/Scripts/TransitionManager.cs" Line="25" Column="19" />
+      <File FileName="Assets/Scripts/NewMonoBehaviour.cs" Line="2" Column="26" />
+      <File FileName="Assets/Scripts/MediaPlayer/NewMonoBehaviour.cs" Line="4" Column="40" />
+      <File FileName="Assets/Scripts/MediaPlayer/NewMonoBehaviour.cs" Line="25" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,7 +18,9 @@
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
                 <Node name="EventSystem" expanded="True" />
-                <Node name="StepController.cs" selected="True" />
+                <Node name="MediaPlayer" expanded="True">
+                  <Node name="AudioMediaPlayer.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>
@@ -22,7 +30,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9a702cd7-a5d6-4653-984e-6d773cc17d0d" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e671a4c7-7ac6-40cc-8c13-2a10e9980523" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
