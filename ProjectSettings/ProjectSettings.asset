@@ -430,8 +430,9 @@ PlayerSettings:
     - Oculus
     - OpenVR
   - m_BuildTarget: Android
-    m_Enabled: 0
-    m_Devices: []
+    m_Enabled: 1
+    m_Devices:
+    - MockHMD
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
   openGLRequireES32: 0
@@ -607,6 +608,7 @@ PlayerSettings:
   ps4ShareFilePath: 
   ps4ShareOverlayImagePath: 
   ps4PrivacyGuardImagePath: 
+  ps4ExtraSceSysFile: 
   ps4NPtitleDatPath: 
   ps4RemotePlayKeyAssignment: -1
   ps4RemotePlayKeyMappingDir: 
@@ -649,6 +651,8 @@ PlayerSettings:
   ps4disableAutoHideSplash: 0
   ps4videoRecordingFeaturesUsed: 0
   ps4contentSearchFeaturesUsed: 0
+  ps4CompatibilityPS5: 0
+  ps4GPU800MHz: 1
   ps4attribEyeToEyeDistanceSettingVR: 0
   ps4IncludedModules: []
   ps4attribVROutputEnabled: 0
@@ -672,7 +676,7 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLWasmStreaming: 0
   scriptingDefineSymbols:
-    7: VIU_PLUGIN;VIU_XR_GENERAL_SETTINGS;VIU_XR_PACKAGE_METADATA_STORE;VIU_WAVEVR;VIU_WAVEVR_2_0_32_OR_NEWER;VIU_WAVEVR_3_0_0_OR_NEWER;VIU_WAVEVR_3_1_0_OR_NEWER;VIU_WAVEVR_3_1_3_OR_NEWER
+    7: VIU_PLUGIN;VIU_XR_GENERAL_SETTINGS;VIU_XR_PACKAGE_METADATA_STORE;VIU_WAVEVR;VIU_WAVEVR_2_0_32_OR_NEWER;VIU_WAVEVR_3_0_0_OR_NEWER;VIU_WAVEVR_3_1_0_OR_NEWER;VIU_WAVEVR_3_1_3_OR_NEWER;WAVEVR_SINGLEPASS_ENABLED
   platformArchitecture: {}
   scriptingBackend:
     Android: 0

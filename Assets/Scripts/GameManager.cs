@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private string[] scenarioTag;
 
-    private void Awake()
+    private void Awake() 
     {
         Instance = this;
     }
