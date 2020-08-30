@@ -113,15 +113,7 @@ public class QCMSystem : MonoBehaviour
         result.text = "Result: " + correctAnswers + " / " + totalQuestions;
     }
 
-    /// <summary>
-    /// Allow player to minimize and maximize the quiz window
-    /// </summary>
-    public void MaxMini()
-    {
-
-    }
-
-    private void Start()
+    protected virtual void Start()
     {
         GenerateQCM();
     }

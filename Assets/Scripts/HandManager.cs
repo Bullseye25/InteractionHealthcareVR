@@ -6,13 +6,18 @@ using WVR_Log;
 
 public class HandManager : MonoBehaviour
 {
+    private const string 
+        LOG_TAG = "ControllerManagerTest", 
+        INTERACTABLE_TAG = "Interactable";
 
-    private static string LOG_TAG = "ControllerManagerTest";
-    [SerializeField] private WaveVR_Controller.EDeviceType eDevice = WaveVR_Controller.EDeviceType.Dominant;
+    [SerializeField] private WaveVR_Controller.EDeviceType eDevice; // = WaveVR_Controller.EDeviceType.Dominant;
+    
     private WVR_PoseState_t pose;
 
-/*    WaveVR_Beam _beam = null;
-    WaveVR_ControllerPointer _pointer = null;*/
+    private bool grabGesture = false;
+
+    //[SerializeField] private WaveVR_Beam _beam = null;
+    //[SerializeField] private WaveVR_ControllerPointer _pointer = null;
 
     public void SetDeviceIndex(WaveVR_Controller.EDeviceType device)
     {
@@ -22,8 +27,10 @@ public class HandManager : MonoBehaviour
 
     void Update()
     {
-/*        var grab = WaveVR_Controller.Input(WaveVR_Controller.EDeviceType.Dominant).GetPressDown(wvr.WVR_InputId.WVR_InputId_Alias1_Trigger);
-*/
+        //grabGesture = WaveVR_Controller.Input(WaveVR_Controller.EDeviceType.Dominant).GetPressDown(wvr.WVR_InputId.WVR_InputId_Alias1_Trigger);
+
+        grabGesture = Input.GetKeyDown(KeyCode.Space);
+
         WVR_DeviceType _type = WaveVR_Controller.Input(this.eDevice).DeviceType;
 
         Interop.WVR_GetPoseState(
@@ -35,74 +42,90 @@ public class HandManager : MonoBehaviour
         transform.localPosition = new WaveVR_Utils.RigidTransform(pose.PoseMatrix).pos;
         transform.localRotation = new WaveVR_Utils.RigidTransform(pose.PoseMatrix).rot;
 
-/*        if(_pointer != null)
+/*
+         if(_pointer != null)
         {
             _pointer.OnPointerEnter
-        }*/
+        }
+*/
+    }
+
+    public bool IsTrigger()
+    {
+        return grabGesture;
+    }
+
+    public bool IsPrimary()
+    {
+        if (eDevice == WaveVR_Controller.EDeviceType.Dominant)
+            return true;
+
+        return false;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "grab")
+        if (other.tag == INTERACTABLE_TAG && transform.childCount == 0)
         {
             other.transform.SetParent(this.transform);
         }
     }
 
-/*    private GameObject dominantController = null, nonDominantController = null;
-    void OnEnable()
-    {
-        WaveVR_Utils.Event.Listen(WaveVR_Utils.Event.CONTROLLER_MODEL_LOADED, OnControllerLoaded);
-    }
+    //private GameObject dominantController = null, nonDominantController = null;
+    
+    //void OnEnable()
+    //{
+    //    WaveVR_Utils.Event.Listen(WaveVR_Utils.Event.CONTROLLER_MODEL_LOADED, OnControllerLoaded);
+    //}
 
-    void OnControllerLoaded(params object[] args)
-    {
-        WaveVR_Controller.EDeviceType _type = (WaveVR_Controller.EDeviceType)args[0];
-        if (_type == WaveVR_Controller.EDeviceType.Dominant)
-        {
-            this.dominantController = (GameObject)args[1];
-            listControllerObjects(this.dominantController);
-        }
-        if (_type == WaveVR_Controller.EDeviceType.NonDominant)
-        {
-            this.nonDominantController = (GameObject)args[1];
-            listControllerObjects(this.nonDominantController);
-        }
-    }
+    //void OnControllerLoaded(params object[] args)
+    //{
+    //    WaveVR_Controller.EDeviceType _type = (WaveVR_Controller.EDeviceType)args[0];
+    //    if (_type == WaveVR_Controller.EDeviceType.Dominant)
+    //    {
+    //        this.dominantController = (GameObject)args[1];
+    //        listControllerObjects(this.dominantController);
+    //    }
+    //    if (_type == WaveVR_Controller.EDeviceType.NonDominant)
+    //    {
+    //        this.nonDominantController = (GameObject)args[1];
+    //        listControllerObjects(this.nonDominantController);
+    //    }
+    //}
 
-    void OnDisable()
-    {
-        WaveVR_Utils.Event.Remove(WaveVR_Utils.Event.CONTROLLER_MODEL_LOADED, OnControllerLoaded);
-    }
+    //void OnDisable()
+    //{
+    //    WaveVR_Utils.Event.Remove(WaveVR_Utils.Event.CONTROLLER_MODEL_LOADED, OnControllerLoaded);
+    //}
 
-    private void listControllerObjects(GameObject ctrlr)
-    {
-        if (ctrlr == null)
-            return;
+    //private void listControllerObjects(GameObject ctrlr)
+    //{
+    //    if (ctrlr == null)
+    //        return;
 
-        // Get all children.
-        GameObject[] _objects = new GameObject[ctrlr.transform.childCount];
-        for (int i = 0; i < ctrlr.transform.childCount; i++)
-            _objects[i] = ctrlr.transform.GetChild(i).gameObject;
+    //    // Get all children.
+    //    GameObject[] _objects = new GameObject[ctrlr.transform.childCount];
+    //    for (int i = 0; i < ctrlr.transform.childCount; i++)
+    //        _objects[i] = ctrlr.transform.GetChild(i).gameObject;
 
-        // Find beam.
-        for (int i = 0; i < _objects.Length; i++)
-        {
-            _beam = _objects[i].GetComponentInChildren<WaveVR_Beam>();
-            if (_beam != null)
-                break;
-        }
-        if (_beam != null)
-            Debug.Log("Find beam: " + _beam.name);
+    //    // Find beam.
+    //    for (int i = 0; i < _objects.Length; i++)
+    //    {
+    //        _beam = _objects[i].GetComponentInChildren<WaveVR_Beam>();
+    //        if (_beam != null)
+    //            break;
+    //    }
+    //    if (_beam != null)
+    //        Debug.Log("Find beam: " + _beam.name);
 
-        // Find pointer.
-        for (int i = 0; i < _objects.Length; i++)
-        {
-            _pointer = _objects[i].GetComponentInChildren<WaveVR_ControllerPointer>();
-            if (_pointer != null)
-                break;
-        }
-        if (_pointer != null)
-            Debug.Log("Find pointer: " + _pointer.name);
-    }*/
+    //    // Find pointer.
+    //    for (int i = 0; i < _objects.Length; i++)
+    //    {
+    //        _pointer = _objects[i].GetComponentInChildren<WaveVR_ControllerPointer>();
+    //        if (_pointer != null)
+    //            break;
+    //    }
+    //    if (_pointer != null)
+    //        Debug.Log("Find pointer: " + _pointer.name);
+    //}
 }

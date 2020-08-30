@@ -6,8 +6,8 @@ TagManager:
   tags:
   - scenario1
   - scenario2
-  - grab
   - VRUIScreen
+  - Interactable
   layers:
   - Default
   - TransparentFX
