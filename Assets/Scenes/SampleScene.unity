@@ -904,6 +904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eDevice: 2
+  interactablesCollection: []
 --- !u!135 &223974228
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1774,6 +1775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eDevice: 3
+  interactablesCollection: []
 --- !u!135 &360976230
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6794,10 +6796,11 @@ MonoBehaviour:
   mRenderer: {fileID: 2074400935}
   highlighterRef: {fileID: 2100000, guid: 6ffca0ab2a83452479b8da0c3a6bbb8a, type: 2}
   highlightingColor: {r: 1, g: 1, b: 0, a: 1}
-  maxOutlineSize: 0.06
+  maxOutlineSize: 0.0005
   highlightDelay: 0.5
   moveDuration: 2
-  primaryHand: {fileID: 0}
+  pointerEnter: 0
+  inHand: 0
 --- !u!114 &2074400940
 MonoBehaviour:
   m_ObjectHideFlags: 0

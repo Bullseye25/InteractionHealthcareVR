@@ -6,18 +6,56 @@ using WVR_Log;
 
 public class HandManager : MonoBehaviour
 {
+    #region Private Variables
     private const string 
         LOG_TAG = "ControllerManagerTest", 
         INTERACTABLE_TAG = "Interactable";
 
     [SerializeField] private WaveVR_Controller.EDeviceType eDevice; // = WaveVR_Controller.EDeviceType.Dominant;
-    
+
     private WVR_PoseState_t pose;
 
-    private bool grabGesture = false;
+    [SerializeField] private Interactable[] interactablesCollection;
 
     //[SerializeField] private WaveVR_Beam _beam = null;
     //[SerializeField] private WaveVR_ControllerPointer _pointer = null;
+
+    #endregion
+
+    #region Unity Callbacks
+
+    private void Start()
+    {
+        interactablesCollection = FindObjectsOfType<Interactable>();
+    }
+
+    private void Update()
+    {
+        Grab();
+
+        Release();
+
+        PositionTracker();
+        
+        /*
+                 if(_pointer != null)
+                {
+                    _pointer.OnPointerEnter
+                }
+        */
+    }
+
+    private void OnTriggerEnter(Collider value)
+    {
+        if (value.tag == INTERACTABLE_TAG && transform.childCount == 0)
+        {
+            value.transform.SetParent(this.transform);
+        }
+    }
+
+    #endregion
+
+    #region Helping Functions
 
     public void SetDeviceIndex(WaveVR_Controller.EDeviceType device)
     {
@@ -25,54 +63,72 @@ public class HandManager : MonoBehaviour
         this.eDevice = device;
     }
 
-    void Update()
+    private void Grab()
     {
-        //grabGesture = WaveVR_Controller.Input(WaveVR_Controller.EDeviceType.Dominant).GetPressDown(wvr.WVR_InputId.WVR_InputId_Alias1_Trigger);
+        if (eDevice != WaveVR_Controller.EDeviceType.Dominant)
+            return;
 
-        grabGesture = Input.GetKeyDown(KeyCode.Space);
+        var grabGesture = WaveVR_Controller.Input(WaveVR_Controller.EDeviceType.Dominant).GetPressDown(wvr.WVR_InputId.WVR_InputId_Alias1_Trigger);
 
-        WVR_DeviceType _type = WaveVR_Controller.Input(this.eDevice).DeviceType;
+        //var grabGesture = Input.GetKeyDown(KeyCode.Space);
+
+        if (grabGesture == true)
+        {
+            if (transform.childCount == 0)
+            {
+                GetInteractable();
+            }
+            else
+            {
+                //TODO: method that would play ther recorder if the recorder in the hand of player
+            }
+        }
+    }
+
+    private void Release()
+    {
+        var releaseGesture = WaveVR_Controller.Input(WaveVR_Controller.EDeviceType.Dominant).GetPressDown(wvr.WVR_InputId.WVR_InputId_Alias1_Touchpad);
+
+        //var releaseGesture = Input.GetKeyDown(KeyCode.X);
+
+        if (releaseGesture == true && transform.GetChild(0) != null)
+        {
+            var child = transform.GetChild(0);
+            child.GetComponent<Interactable>().SetInHand(false);
+            child.SetParent(null);
+        }
+    }
+
+    private void PositionTracker()
+    {
+        var type = WaveVR_Controller.Input(this.eDevice).DeviceType;
 
         Interop.WVR_GetPoseState(
-            _type,
+            type,
             WVR_PoseOriginModel.WVR_PoseOriginModel_OriginOnHead,
             500,
             ref pose);
 
         transform.localPosition = new WaveVR_Utils.RigidTransform(pose.PoseMatrix).pos;
         transform.localRotation = new WaveVR_Utils.RigidTransform(pose.PoseMatrix).rot;
+    }
 
-/*
-         if(_pointer != null)
+    private void GetInteractable()
+    {
+        foreach(var interactable in interactablesCollection)
         {
-            _pointer.OnPointerEnter
-        }
-*/
-    }
-
-    public bool IsTrigger()
-    {
-        return grabGesture;
-    }
-
-    public bool IsPrimary()
-    {
-        if (eDevice == WaveVR_Controller.EDeviceType.Dominant)
-            return true;
-
-        return false;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == INTERACTABLE_TAG && transform.childCount == 0)
-        {
-            other.transform.SetParent(this.transform);
+            if (interactable.IsPointerOnInteractable())
+            {
+                interactable.SetInHand(true);
+                interactable.MoveTo(transform.position, 0.05f);
+                interactable.SetInHand(false);
+                break;
+            }
         }
     }
 
     //private GameObject dominantController = null, nonDominantController = null;
-    
+
     //void OnEnable()
     //{
     //    WaveVR_Utils.Event.Listen(WaveVR_Utils.Event.CONTROLLER_MODEL_LOADED, OnControllerLoaded);
@@ -128,4 +184,7 @@ public class HandManager : MonoBehaviour
     //    if (_pointer != null)
     //        Debug.Log("Find pointer: " + _pointer.name);
     //}
+
+    #endregion
+
 }

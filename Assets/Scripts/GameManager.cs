@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    #region Private Variables
     private StepsManager stepsManager;
 
+    [SerializeField] private string[] scenarioTag;
+    #endregion
+
+    #region Public Variables
     public static GameManager Instance;
+    #endregion
 
-    [SerializeField]
-    private string[] scenarioTag;
-
+    #region Unity Callbacks
     private void Awake() 
     {
         Instance = this;
@@ -20,6 +24,9 @@ public class GameManager : MonoBehaviour
     {
         stepsManager = StepsManager.Instance;
     }
+    #endregion
+
+    #region Event Functions
 
     public void ChooseScenario(string scenarioID)
     {
@@ -31,4 +38,6 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+    #endregion
+
 }

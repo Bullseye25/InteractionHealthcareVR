@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class QCMSystem : MonoBehaviour
 {
+    #region Private Variables
     [SerializeField] private QuestionEntity[] questions;
     [SerializeField] private GameObject quizPrefab;
     [SerializeField] private GameObject answerPrefab;
@@ -15,7 +16,42 @@ public class QCMSystem : MonoBehaviour
     private int currentQuestion = 0;
     /*    public delegate void Demo();
         public Demo demo;*/
+    #endregion
 
+    #region Unity Callbacks
+    protected virtual void Start()
+    {
+        GenerateQCM();
+    }
+
+    /*    private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.N))
+            {
+                Next();
+            }
+            if (Input.GetKeyDown(KeyCode.B))
+            {
+                Back();
+            }
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                demo();
+
+                for (int i =0; i < questions.Length; i++)
+                {
+                    questions[i].playerSelection = 0;
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                GetResult();
+            }
+        }*/
+    #endregion
+
+    #region Helping Functions
+    
     private void GenerateQCM()
     {
         quiz = new GameObject[questions.Length];
@@ -63,6 +99,10 @@ public class QCMSystem : MonoBehaviour
         }
     }
 
+    #endregion
+
+    #region Event Functions
+
     private void OnSelectAnswer(Transform parent, Button button)
     {
         questions[currentQuestion].playerSelection = int.Parse(button.name);
@@ -75,6 +115,7 @@ public class QCMSystem : MonoBehaviour
 
         button.image.color = Color.green;
     }
+
 
     public void Next()
     {
@@ -113,33 +154,6 @@ public class QCMSystem : MonoBehaviour
         result.text = "Result: " + correctAnswers + " / " + totalQuestions;
     }
 
-    protected virtual void Start()
-    {
-        GenerateQCM();
-    }
+    #endregion
 
-/*    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            Next();
-        }
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            Back();
-        }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            demo();
-
-            for (int i =0; i < questions.Length; i++)
-            {
-                questions[i].playerSelection = 0;
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            GetResult();
-        }
-    }*/
 }

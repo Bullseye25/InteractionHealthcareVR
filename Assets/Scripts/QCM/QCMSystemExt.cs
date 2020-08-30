@@ -5,11 +5,32 @@ using UnityEngine.UI;
 
 public class QCMSystemExt : QCMSystem
 {
+    #region Private Variables
     [SerializeField] private RectTransform maxParent, miniParent;
     [SerializeField] private Sprite mini, max;
     private RectTransform rect;
     private bool sizeMini = true;
-/*    public Image image;*/
+    /*    public Image image;*/
+
+    #endregion
+
+    #region Unity Callbacks
+    // Start is called before the first frame update
+    protected override void Start()
+    {
+        base.Start();
+
+        rect = GetComponent<RectTransform>() != null ? GetComponent<RectTransform>() : null;
+    }
+
+    /*    private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+                MaxMini(image);
+        }*/
+    #endregion
+
+    #region Helping Functions
 
     /// <summary>
     /// Allow player to minimize and maximize the quiz window
@@ -21,14 +42,14 @@ public class QCMSystemExt : QCMSystem
 
         if (sizeMini)
         {
-            icon.sprite = max;
+            icon.sprite = mini;
             transform.SetParent(maxParent);
 
             sizeMini = false;
         }
         else
         {
-            icon.sprite = mini;
+            icon.sprite = max;
             transform.SetParent(miniParent);
 
             sizeMini = true;
@@ -40,17 +61,6 @@ public class QCMSystemExt : QCMSystem
         rect.sizeDelta = Vector3.zero;
     }
 
-    // Start is called before the first frame update
-    protected override void Start()
-    {
-        base.Start();
+    #endregion
 
-        rect = GetComponent<RectTransform>() != null ? GetComponent<RectTransform>() : null;
-    }
-
-/*    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-            MaxMini(image);
-    }*/
 }
