@@ -12,10 +12,7 @@ public class StepController : MonoBehaviour
         stepsManager = StepsManager.Instance;
     }
 
-    public void DoTransition()
-    {
 
-    }
 
     //void Update()
     //{

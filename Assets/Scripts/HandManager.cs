@@ -50,6 +50,8 @@ public class HandManager : MonoBehaviour
         if (value.tag == INTERACTABLE_TAG && transform.childCount == 0)
         {
             value.transform.SetParent(this.transform);
+            value.transform.localPosition = Vector3.zero;
+            value.transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
     }
 
@@ -68,9 +70,9 @@ public class HandManager : MonoBehaviour
         if (eDevice != WaveVR_Controller.EDeviceType.Dominant)
             return;
 
-        var grabGesture = WaveVR_Controller.Input(WaveVR_Controller.EDeviceType.Dominant).GetPressDown(wvr.WVR_InputId.WVR_InputId_Alias1_Trigger);
+        //var grabGesture = WaveVR_Controller.Input(WaveVR_Controller.EDeviceType.Dominant).GetPressDown(wvr.WVR_InputId.WVR_InputId_Alias1_Trigger);
 
-        //var grabGesture = Input.GetKeyDown(KeyCode.Space);
+        var grabGesture = Input.GetKeyDown(KeyCode.Space);
 
         if (grabGesture == true)
         {
@@ -87,9 +89,9 @@ public class HandManager : MonoBehaviour
 
     private void Release()
     {
-        var releaseGesture = WaveVR_Controller.Input(WaveVR_Controller.EDeviceType.Dominant).GetPressDown(wvr.WVR_InputId.WVR_InputId_Alias1_Touchpad);
+        //var releaseGesture = WaveVR_Controller.Input(WaveVR_Controller.EDeviceType.Dominant).GetPressDown(wvr.WVR_InputId.WVR_InputId_Alias1_Touchpad);
 
-        //var releaseGesture = Input.GetKeyDown(KeyCode.X);
+        var releaseGesture = Input.GetKeyDown(KeyCode.X);
 
         if (releaseGesture == true && transform.GetChild(0) != null)
         {

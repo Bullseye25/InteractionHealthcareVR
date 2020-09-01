@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Dummy : MonoBehaviour
 {
-    public TransitionManager transition;
+    //public TransitionManager transition;
     // Update is called once per frame
 /*    void Update()
     {

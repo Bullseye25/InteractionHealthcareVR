@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 
-public class VideoMediaPlayer : IMediaPlayer
+public class VideoMediaPlayer : MonoBehaviour, IMediaPlayer
 {
     public void OnMediaFinished()
     {
@@ -21,17 +22,5 @@ public class VideoMediaPlayer : IMediaPlayer
     public void Repeat()
     {
         throw new System.NotImplementedException();
-    }
-
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }

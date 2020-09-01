@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
 
 public class TransitionManager : MonoBehaviour
 {
@@ -10,8 +11,16 @@ public class TransitionManager : MonoBehaviour
     [SerializeField] private MeshRenderer vrView;
     [SerializeField] private float fadeInTime, fadeOutTime, fadeInDelay, fadeOutDelay;
     [SerializeField] private TextMeshProUGUI[] infoBars;
-    [SerializeField] private GameObject obj;
 
+    public UnityEvent OnFadeIn;
+    public UnityEvent OnFadeOut;
+
+    public static TransitionManager Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
@@ -21,7 +30,6 @@ public class TransitionManager : MonoBehaviour
 
         gameObject.SetActive(false);
 
-/*        FadeOut();*/
     }
 
     private void PrepareInfoBar()
@@ -45,7 +53,8 @@ public class TransitionManager : MonoBehaviour
     public void FadeIn()
     {
         UIActivator(false);
-        transition.FadeIn(fadeInTime, fadeInDelay);//, () => { VoidAreInfo(true); });
+
+        transition.FadeIn(fadeInTime, fadeInDelay, () => { OnFadeIn?.Invoke(); });
 
         StartCoroutine(DisableInfo());
     }
@@ -73,14 +82,12 @@ public class TransitionManager : MonoBehaviour
 
     public void FadeOut()
     {
-        transition.FadeOut(fadeOutTime, fadeOutDelay/*);//*/, SelfDisable);
+        transition.FadeOut(fadeOutTime, fadeOutDelay, () => { OnFadeOut?.Invoke(); });
     }
 
-    private void SelfDisable()
+    public void SelfDisable()
     {
-        obj.SetActive(true);
         gameObject.SetActive(false);
-
     }
 
     private void UIActivator(bool value)
@@ -91,12 +98,22 @@ public class TransitionManager : MonoBehaviour
         }
     }
 
-/*    private void Update()
+    public void ClearFadeInListeners()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        OnFadeIn.RemoveAllListeners();
+    }
+
+    public void ClearFadeOutListeners()
+    {
+        OnFadeOut.RemoveAllListeners();
+    }
+
+    /*    private void Update()
         {
-            InfoHolder("testing");
-            FadeIn();
-        }
-    }*/
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                InfoHolder("testing");
+                FadeIn();
+            }
+        }*/
 }

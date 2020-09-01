@@ -7,7 +7,7 @@ public class StepsManager : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private List<Step> steps = new List<Step>();
-    [SerializeField] private TextMeshPro description3DText;
+    //[SerializeField] private TextMeshPro description3DText;
 
     [Header("Settings")]
     [SerializeField] private bool autoStart = true;
@@ -46,7 +46,7 @@ public class StepsManager : MonoBehaviour
         if (currentStep < steps.Count)
         {
             steps[currentStep].OnStepStart?.Invoke();
-            description3DText.text = steps[currentStep].description;
+            //description3DText.text = steps[currentStep].description;
         }
     }
 
