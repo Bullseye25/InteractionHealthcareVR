@@ -115,7 +115,12 @@ public class TransitionManager : MonoBehaviour
         tempObjHolder = obj;
     }
 
-    public void OnFadeInOBJ(bool value)
+    public GameObject GetGameObject()
+    {
+        return tempObjHolder;
+    }
+
+    public void FadeIn(bool value)
     {
         OnFadeIn.AddListener(() => 
         {
@@ -127,7 +132,7 @@ public class TransitionManager : MonoBehaviour
         FadeIn();
     }
 
-    public void OnFadeOutOBJ(bool value)
+    public void FadeOut(bool value)
     {
         OnFadeOut.AddListener(() =>
         {
@@ -135,8 +140,6 @@ public class TransitionManager : MonoBehaviour
             tempObjHolder = null;
             ClearFadeOutListeners();
         });
-
-        FadeOut();
     }
     /*    private void Update()
         {

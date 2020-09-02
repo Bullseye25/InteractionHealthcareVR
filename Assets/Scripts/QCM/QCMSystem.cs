@@ -15,15 +15,18 @@ public class QCMSystem : MonoBehaviour
     [SerializeField] private TextMeshProUGUI result;
     private GameObject[] quiz;
     private int currentQuestion = 0;
-
+    private GameObject tempObjHolder;
+    private TransitionManager transition;
     public UnityEvent OnProceed;
     /*    public delegate void Demo();
         public Demo demo;*/
+
     #endregion
 
     #region Unity Callbacks
     protected virtual void Start()
     {
+        transition = TransitionManager.Instance;
         GenerateQCM();
     }
 
@@ -54,7 +57,7 @@ public class QCMSystem : MonoBehaviour
     #endregion
 
     #region Helping Functions
-    
+
     private void GenerateQCM()
     {
         quiz = new GameObject[questions.Length];
@@ -166,9 +169,29 @@ public class QCMSystem : MonoBehaviour
         while (currentQuestion != 0);
     }
 
-    public void OnSubmit()
+    public void Proceed()
     {
         OnProceed?.Invoke();
+    }
+
+    public void Proceed(bool value)
+    {
+        OnProceed.AddListener(() =>
+        {
+            transition.gameObject.SetActive(true);
+            transition.FadeIn(value);
+            OnProceed.RemoveAllListeners();
+        });
+    }
+
+    public void SetGameObject(GameObject obj)
+    {
+        tempObjHolder = obj;
+    }
+
+    public GameObject GetGameObject()
+    {
+        return tempObjHolder;
     }
 
     #endregion

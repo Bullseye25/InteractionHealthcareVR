@@ -1,12 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.Events;
+using UnityEngine.Playables;
 
 public class AudioMediaPlayer : MonoBehaviour, IMediaPlayer
 {
     [SerializeField] private AudioSource source;
     public UnityEvent OnAudioFinished;
+
     public UnityEvent OnProceed;
+
+    private TransitionManager transition;
+    private GameObject tempObjHolder;
+
+    private void Start()
+    {
+        transition = TransitionManager.Instance;
+    }
 
     public void OnMediaFinished()
     {
@@ -41,6 +51,40 @@ public class AudioMediaPlayer : MonoBehaviour, IMediaPlayer
         }
     }
 
+    public void SetGameObject(GameObject obj)
+    {
+        tempObjHolder = obj;
+    }
+
+    public GameObject GetGameObject()
+    {
+        return tempObjHolder;
+    }
+
+    public void Proceed(bool value)
+    {
+        OnProceed.AddListener(() =>
+        {
+            transition.gameObject.SetActive(true);
+            transition.FadeIn(value);
+            OnProceed.RemoveAllListeners();
+        });
+    }
+
+    public void Proceed(int componentIndex)
+    {
+        OnProceed.AddListener(() =>
+        {
+            if (componentIndex == (int)UnityComponents.BOX_COLLIDER)
+                tempObjHolder.GetComponent<BoxCollider>().enabled = true;
+            else if (componentIndex == (int)UnityComponents.PLAYER_DIRECTOR)
+                tempObjHolder.GetComponent<PlayableDirector>().enabled = true;
+
+            tempObjHolder = null;
+            OnProceed.RemoveAllListeners();
+        });
+    }
+
     public void Proceed()
     {
         OnProceed?.Invoke();
@@ -61,3 +105,9 @@ public class AudioMediaPlayer : MonoBehaviour, IMediaPlayer
         Play();
     }
 }
+
+public enum UnityComponents
+{
+    BOX_COLLIDER,
+    PLAYER_DIRECTOR,
+};
