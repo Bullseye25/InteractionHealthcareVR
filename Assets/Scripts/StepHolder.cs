@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.Playables;
 
 public class StepHolder : MonoBehaviour
 {
     private TransitionManager transition;
     private StepsManager stepsManager;
-    [SerializeField] GameObject[] objToEnable;
+    [SerializeField] GameObject patient;
 
     private void Start()
     {
@@ -16,8 +15,6 @@ public class StepHolder : MonoBehaviour
 
     public void Scenario1Step1(GameObject eMailPanel)
     {
-        Debug.LogWarning("***Scenario1 Step1***");
-
         transition.OnFadeOut.AddListener(() => 
         {
             eMailPanel.SetActive(true);
@@ -27,33 +24,53 @@ public class StepHolder : MonoBehaviour
 
     public void Scenario1Step2(AudioMediaPlayer mediaPlayer)
     {
-        Debug.LogWarning("***Scenario1 Step2***");
-
         mediaPlayer.OnProceed.AddListener(() =>
         {
             transition.gameObject.SetActive(true);
             transition.FadeIn();
             transition.OnFadeIn.AddListener(() =>
             {
-                foreach (var obj in objToEnable)
-                { obj.SetActive(true); }
+                patient.SetActive(true);
                 transition.ClearFadeInListeners();
             });
+
+            mediaPlayer.ClearProceed();
         });
     }
 
-    public void Scenario1Step3(GameObject QCM)
+    public void Scenario1Step3(AudioMediaPlayer mediaPlayer)
+    {
+        mediaPlayer.OnProceed.AddListener(() =>
+        {
+            var pd = FindObjectOfType<PlayableDirector>();
+            pd.GetComponent<BoxCollider>().enabled = true;
+            mediaPlayer.ClearProceed();
+        });
+    }
+
+    public void Scenario1Step4(QCMSystemExt QCM)
     {
         transition.OnFadeIn.AddListener(() =>
         {
-            foreach (var obj in objToEnable)
-            { obj.SetActive(false); }
+            patient.SetActive(false); 
             transition.ClearFadeInListeners();
         });
 
         transition.OnFadeOut.AddListener(() =>
         {
-            QCM.SetActive(true);
+            QCM.OnProceed.AddListener(() => 
+            {
+                transition.gameObject.SetActive(true);
+                transition.FadeIn();
+                transition.OnFadeIn.AddListener(() => 
+                {
+                    var ExamReport = transform.parent.transform.Find("Report.Panel.2");
+                    ExamReport.gameObject.SetActive(true);
+                });
+                QCM.OnProceed.RemoveAllListeners();
+            });
+
+            QCM.gameObject.SetActive(true);
             transition.ClearFadeOutListeners();
         });
     }

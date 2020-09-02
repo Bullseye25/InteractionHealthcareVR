@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class QCMSystem : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class QCMSystem : MonoBehaviour
     [SerializeField] private TextMeshProUGUI result;
     private GameObject[] quiz;
     private int currentQuestion = 0;
+
+    public UnityEvent OnProceed;
     /*    public delegate void Demo();
         public Demo demo;*/
     #endregion
@@ -152,6 +155,20 @@ public class QCMSystem : MonoBehaviour
         }
 
         result.text = "Result: " + correctAnswers + " / " + totalQuestions;
+    }
+
+    public void OnRetry()
+    {
+        do
+        {
+            Back();
+        }
+        while (currentQuestion != 0);
+    }
+
+    public void OnSubmit()
+    {
+        OnProceed?.Invoke();
     }
 
     #endregion

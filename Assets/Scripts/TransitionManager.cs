@@ -12,6 +12,8 @@ public class TransitionManager : MonoBehaviour
     [SerializeField] private float fadeInTime, fadeOutTime, fadeInDelay, fadeOutDelay;
     [SerializeField] private TextMeshProUGUI[] infoBars;
 
+    private GameObject tempObjHolder;
+
     public UnityEvent OnFadeIn;
     public UnityEvent OnFadeOut;
 
@@ -108,6 +110,34 @@ public class TransitionManager : MonoBehaviour
         OnFadeOut.RemoveAllListeners();
     }
 
+    public void SetGameObject(GameObject obj)
+    {
+        tempObjHolder = obj;
+    }
+
+    public void OnFadeInOBJ(bool value)
+    {
+        OnFadeIn.AddListener(() => 
+        {
+            tempObjHolder.SetActive(value);
+            tempObjHolder = null;
+            ClearFadeInListeners();
+        });
+
+        FadeIn();
+    }
+
+    public void OnFadeOutOBJ(bool value)
+    {
+        OnFadeOut.AddListener(() =>
+        {
+            tempObjHolder.SetActive(value);
+            tempObjHolder = null;
+            ClearFadeOutListeners();
+        });
+
+        FadeOut();
+    }
     /*    private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Space))
