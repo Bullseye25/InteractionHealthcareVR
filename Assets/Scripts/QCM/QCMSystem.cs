@@ -184,6 +184,8 @@ public class QCMSystem : MonoBehaviour
         });
     }
 
+
+
     public void SetGameObject(GameObject obj)
     {
         tempObjHolder = obj;
