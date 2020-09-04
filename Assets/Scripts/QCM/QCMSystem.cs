@@ -7,8 +7,10 @@ using UnityEngine.Events;
 
 public class QCMSystem : MonoBehaviour
 {
+    public UnityEvent OnProceed;
+
     #region Private Variables
-    [SerializeField] private QuestionEntity[] questions;
+    private QCMCollection qcmList;
     [SerializeField] private GameObject quizPrefab;
     [SerializeField] private GameObject answerPrefab;
     [SerializeField] private Transform questionHolder;
@@ -17,54 +19,31 @@ public class QCMSystem : MonoBehaviour
     private int currentQuestion = 0;
     private GameObject tempObjHolder;
     private TransitionManager transition;
-    public UnityEvent OnProceed;
-    /*    public delegate void Demo();
-        public Demo demo;*/
-
     #endregion
 
     #region Unity Callbacks
     protected virtual void Start()
     {
         transition = TransitionManager.Instance;
-        GenerateQCM();
     }
-
-    /*    private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.N))
-            {
-                Next();
-            }
-            if (Input.GetKeyDown(KeyCode.B))
-            {
-                Back();
-            }
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                demo();
-
-                for (int i =0; i < questions.Length; i++)
-                {
-                    questions[i].playerSelection = 0;
-                }
-            }
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                GetResult();
-            }
-        }*/
     #endregion
 
-    #region Helping Functions
-
-    private void GenerateQCM()
+    #region Event Functions
+    public void ApplyQCM(QCMCollection qcm)
     {
-        quiz = new GameObject[questions.Length];
+        qcmList = qcm;
+    }
 
-        for(int i = 0; i < questions.Length; i++)
+    public void GenerateQCM()
+    {
+        if (qcmList == null)
+            return;
+
+        quiz = new GameObject[qcmList.questions.Length];
+
+        for(int i = 0; i < qcmList.questions.Length; i++)
         {
-            var question = questions[i];
+            var question = qcmList.questions[i];
 
             var _quiz = Instantiate(quizPrefab, quizPrefab.transform.position, quizPrefab.transform.rotation);
             _quiz.transform.SetParent(questionHolder);
@@ -99,19 +78,25 @@ public class QCMSystem : MonoBehaviour
                 button.name = selectables.ToString();
                 button.onClick.AddListener(() => { OnSelectAnswer(answerHolder, button); });
 
-/*                if(selectables == 0)
-                    demo += () => { OnSelectAnswer(answerHolder, button, selectables); };*/
             }
         }
     }
 
-    #endregion
+    public void ClearQCM()
+    {
+        if (quiz == null)
+            return;
 
-    #region Event Functions
+        foreach(var question in quiz)
+        {
+            //TODO: Apply object-pooling and reuse the already created gameobjects(questions) 
+            Destroy(question);
+        }
+    }
 
     private void OnSelectAnswer(Transform parent, Button button)
     {
-        questions[currentQuestion].playerSelection = int.Parse(button.name);
+        qcmList.questions[currentQuestion].playerSelection = int.Parse(button.name);
 
         foreach(Transform _button in parent)
         {
@@ -122,10 +107,9 @@ public class QCMSystem : MonoBehaviour
         button.image.color = Color.green;
     }
 
-
     public void Next()
     {
-        if ((currentQuestion + 1) >= questions.Length)
+        if ((currentQuestion + 1) >= qcmList.questions.Length)
             return;
 
         quiz[currentQuestion].SetActive(false);
@@ -148,10 +132,10 @@ public class QCMSystem : MonoBehaviour
 
     public void GetResult()
     {
-        int totalQuestions = questions.Length;
+        int totalQuestions = qcmList.questions.Length;
         int correctAnswers = 0;
 
-        foreach(var answer in questions)
+        foreach(var answer in qcmList.questions)
         {
             if (answer.IsCorrect())
                 correctAnswers++;
@@ -184,8 +168,6 @@ public class QCMSystem : MonoBehaviour
         });
     }
 
-
-
     public void SetGameObject(GameObject obj)
     {
         tempObjHolder = obj;
@@ -195,7 +177,5 @@ public class QCMSystem : MonoBehaviour
     {
         return tempObjHolder;
     }
-
     #endregion
-
 }

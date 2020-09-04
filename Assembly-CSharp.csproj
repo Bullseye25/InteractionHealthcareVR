@@ -70,7 +70,6 @@
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUI.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUtils.cs" />
-    <Compile Include="Assets\Scripts\Dummy.cs" />
     <Compile Include="Assets\Scripts\EventSystem\Fader.cs" />
     <Compile Include="Assets\Scripts\EventSystem\StepsManager.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
@@ -80,12 +79,13 @@
     <Compile Include="Assets\Scripts\MediaPlayer\Interface\IMediaPlayer.cs" />
     <Compile Include="Assets\Scripts\MediaPlayer\VideoMediaPlayer.cs" />
     <Compile Include="Assets\Scripts\MoveTo.cs" />
+    <Compile Include="Assets\Scripts\QCM\QCMCollection.cs" />
     <Compile Include="Assets\Scripts\QCM\QCMSystem.cs" />
     <Compile Include="Assets\Scripts\QCM\QCMSystemExt.cs" />
     <Compile Include="Assets\Scripts\QCM\QuestionEntity.cs" />
+    <Compile Include="Assets\Scripts\Reporter-Window\ReporterSystem.cs" />
     <Compile Include="Assets\Scripts\Step.cs" />
     <Compile Include="Assets\Scripts\StepController.cs" />
-    <Compile Include="Assets\Scripts\StepHolder.cs" />
     <Compile Include="Assets\Scripts\TransitionManager.cs" />
     <Compile Include="Assets\WaveVR\Extra\Beam.cs" />
     <Compile Include="Assets\WaveVR\Extra\BundlePreview\Scripts\BundlePreviewLoader.cs" />

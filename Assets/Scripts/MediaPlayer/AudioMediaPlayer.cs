@@ -6,8 +6,8 @@ using UnityEngine.Playables;
 public class AudioMediaPlayer : MonoBehaviour, IMediaPlayer
 {
     [SerializeField] private AudioSource source;
-    public UnityEvent OnAudioFinished;
 
+    public UnityEvent OnAudioFinished;
     public UnityEvent OnProceed;
 
     private TransitionManager transition;
@@ -35,7 +35,6 @@ public class AudioMediaPlayer : MonoBehaviour, IMediaPlayer
             OnAudioFinished?.Invoke();
         }
     }
-
 
     public void SetClip(AudioClip clip)
     {

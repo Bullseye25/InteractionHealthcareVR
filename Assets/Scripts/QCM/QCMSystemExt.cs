@@ -10,8 +10,6 @@ public class QCMSystemExt : QCMSystem
     [SerializeField] private Sprite mini, max;
     private RectTransform rect;
     private bool sizeMini = true;
-    /*    public Image image;*/
-
     #endregion
 
     #region Unity Callbacks
@@ -23,11 +21,6 @@ public class QCMSystemExt : QCMSystem
         rect = GetComponent<RectTransform>() != null ? GetComponent<RectTransform>() : null;
     }
 
-    /*    private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-                MaxMini(image);
-        }*/
     #endregion
 
     #region Helping Functions

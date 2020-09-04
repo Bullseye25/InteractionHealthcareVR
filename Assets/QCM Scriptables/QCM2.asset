@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fc8defdd9bd4f14ebb6bacd278fdb27, type: 3}
+  m_Name: QCM2
+  m_EditorClassIdentifier: 
+  questions:
+  - id: 0
+    question: 'Quel dernier examen radiographique demandez vous ? '
+    answers:
+    - IRM
+    - Echographie abdominale
+    - Doppler
+    - Scanner
+    correctAnswer: 3
+    playerSelection: -1
+  - id: 1
+    question: "Quels crit\xE8res regardez-vous durant cet examen ? "
+    answers:
+    - Taille du foie
+    - 'Taille de la rate '
+    - "Indice de r\xE9sistance de l\u2019art\xE8re h\xE9patique"
+    - "Index de r\xE9sistance vasculaire r\xE9nal"
+    correctAnswer: 3
+    playerSelection: -1
