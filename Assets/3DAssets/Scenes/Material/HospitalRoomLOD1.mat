@@ -8,8 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: HospitalRoomLOD1
-  m_Shader: {fileID: 4800000, guid: 4086d4c6b9ced9142a33a47ea9eab4ea, type: 3}
-  m_ShaderKeywords: 
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _AmbientBake:
-        m_Texture: {fileID: 2800000, guid: 9548a6b50adf34e30a9ead7b78eeb557, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7e0e4da4267462f499978d542237258b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -40,19 +40,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DirectionnalBake:
-        m_Texture: {fileID: 2800000, guid: 3dcd600e6eb43414ea857c479d5107e2, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8f146638db0f9b34c9717e6bf227adec, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ElectricBake:
-        m_Texture: {fileID: 2800000, guid: e6f42ee4166a145fa9c5e5075c63ebde, type: 3}
+        m_Texture: {fileID: 2800000, guid: 10844a8135c574047915d3d72d7f0f62, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 2d05a9e9ae71d2e40a9e77d55fdc9523, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 110a389a7b4eaaf4c800b1ca120ace2f, type: 3}
+        m_Texture: {fileID: 2800000, guid: e5b5a813d71e7ae44b83173c0c950db1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -60,7 +60,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: 9ac44c714480eba4da8a30b61499458d, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
@@ -90,8 +90,8 @@ Material:
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
-    - _AmbientColor: {r: 1, g: 1, b: 1, a: 1}
+    - _AmbientColor: {r: 1, g: 1, b: 1, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DirectionnalColor: {r: 0, g: 0, b: 0, a: 0}
-    - _ElectricColor: {r: 6.0077085, g: 6.0077085, b: 6.0077085, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ElectricColor: {r: 4, g: 4, b: 4, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}

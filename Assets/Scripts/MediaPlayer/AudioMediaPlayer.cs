@@ -6,11 +6,9 @@ using UnityEngine.Playables;
 public class AudioMediaPlayer : MonoBehaviour, IMediaPlayer
 {
     [SerializeField] private AudioSource source;
-
+    private TransitionManager transition;
     public UnityEvent OnAudioFinished;
     public UnityEvent OnProceed;
-
-    private TransitionManager transition;
 
     private void Start()
     {

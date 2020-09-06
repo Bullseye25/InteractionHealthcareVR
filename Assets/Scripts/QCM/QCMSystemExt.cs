@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class QCMSystemExt : QCMSystem
 {
     #region Private Variables
     [SerializeField] private RectTransform maxParent, miniParent;
     [SerializeField] private Sprite mini, max;
+    [SerializeField] private float moveSpeed;
     private RectTransform rect;
     private bool sizeMini = true;
     #endregion
@@ -35,23 +37,34 @@ public class QCMSystemExt : QCMSystem
 
         if (sizeMini)
         {
-            icon.sprite = mini;
+            if (icon != null)
+                icon.sprite = mini;
+
             transform.SetParent(maxParent);
+
 
             sizeMini = false;
         }
         else
         {
-            icon.sprite = max;
+            if (icon != null)
+                icon.sprite = max;
+
             transform.SetParent(miniParent);
 
             sizeMini = true;
         }
 
-        rect.anchoredPosition = Vector3.zero;
+
+/*        rect.anchoredPosition = Vector3.zero;
         rect.localPosition = Vector3.zero;
         rect.localRotation = Quaternion.Euler(0, 0, 0);
-        rect.sizeDelta = Vector3.zero;
+        rect.sizeDelta = Vector3.zero;*/
+
+        rect.DOAnchorPos(Vector3.zero, moveSpeed);
+        rect.DOLocalMove(Vector3.zero, moveSpeed);
+        rect.DOLocalRotate(Vector3.zero, moveSpeed);
+        rect.DOSizeDelta(Vector2.zero, moveSpeed);
     }
 
     #endregion
