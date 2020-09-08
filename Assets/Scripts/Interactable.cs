@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Interactable : MonoBehaviour
 {
@@ -12,7 +13,8 @@ public class Interactable : MonoBehaviour
         HIGHLIGHTER_PROPERTY_OUTLINE_COLOR = "_OutlineColor";
 
     [SerializeField] private MeshRenderer mRenderer;
-    
+    [SerializeField] private Texture texture;
+
     [SerializeField] private Material highlighterRef;
     private Material highlighter;
 
@@ -25,6 +27,12 @@ public class Interactable : MonoBehaviour
     
     [SerializeField] private bool pointerEnter = false, inHand = false;
 
+    #endregion
+
+    #region Public Variables
+
+    public UnityEvent OnGrab;
+    
     #endregion
 
     #region Unity Callbacks
@@ -103,6 +111,9 @@ public class Interactable : MonoBehaviour
         {
             name = "HIGHLIGHTER"
         };
+
+        if(texture != null)
+            highlighter.mainTexture = texture;
 
         highlighter.SetColor(HIGHLIGHTER_PROPERTY_OUTLINE_COLOR, highlightingColor);
 

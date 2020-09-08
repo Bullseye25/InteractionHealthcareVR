@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using wvr;
 using WVR_Log;
+using DG.Tweening;
 
 public class HandManager : MonoBehaviour
 {
@@ -52,6 +53,7 @@ public class HandManager : MonoBehaviour
             value.transform.SetParent(this.transform);
             value.transform.localPosition = Vector3.zero;
             value.transform.localRotation = Quaternion.Euler(0, 0, 0);
+            value.GetComponent<Interactable>().OnGrab?.Invoke();
         }
     }
 
@@ -70,9 +72,9 @@ public class HandManager : MonoBehaviour
         if (eDevice != WaveVR_Controller.EDeviceType.Dominant)
             return;
 
-        //var grabGesture = WaveVR_Controller.Input(WaveVR_Controller.EDeviceType.Dominant).GetPressDown(wvr.WVR_InputId.WVR_InputId_Alias1_Trigger);
+        var grabGesture = WaveVR_Controller.Input(WaveVR_Controller.EDeviceType.Dominant).GetPressDown(wvr.WVR_InputId.WVR_InputId_Alias1_Trigger);
 
-        var grabGesture = Input.GetKeyDown(KeyCode.Space);
+        //var grabGesture = Input.GetKeyDown(KeyCode.Space);
 
         if (grabGesture == true)
         {
@@ -89,11 +91,11 @@ public class HandManager : MonoBehaviour
 
     private void Release()
     {
-        //var releaseGesture = WaveVR_Controller.Input(WaveVR_Controller.EDeviceType.Dominant).GetPressDown(wvr.WVR_InputId.WVR_InputId_Alias1_Touchpad);
+        var releaseGesture = WaveVR_Controller.Input(WaveVR_Controller.EDeviceType.Dominant).GetPressDown(wvr.WVR_InputId.WVR_InputId_Alias1_Touchpad);
 
-        var releaseGesture = Input.GetKeyDown(KeyCode.X);
+        //var releaseGesture = Input.GetKeyDown(KeyCode.X);
 
-        if (releaseGesture == true && transform.GetChild(0) != null)
+        if (releaseGesture == true && transform.childCount != 0) //transform.GetChild(0).gameObject != null)
         {
             var child = transform.GetChild(0);
             child.GetComponent<Interactable>().SetInHand(false);

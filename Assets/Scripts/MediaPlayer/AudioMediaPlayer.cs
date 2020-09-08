@@ -62,6 +62,7 @@ public class AudioMediaPlayer : MonoBehaviour, IMediaPlayer
         OnProceed.AddListener(() =>
         {
             gameObject.SetActive(true);
+            OnProceed.RemoveAllListeners();
         });
     }
 

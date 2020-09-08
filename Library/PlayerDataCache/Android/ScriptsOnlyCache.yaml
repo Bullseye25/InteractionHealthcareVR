@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AnimateIT
     - AudioMediaPlayer
     - Fader
     - GameManager
@@ -8,13 +9,17 @@ ScriptsOnlyBuild:
     - IndicatorLine
     - Interactable
     - MoveTo
+    - OnHit
+    - QCMCollection
     - QCMSystemExt
+    - ReporterSystem
     - RingMeshDrawer
     - Step
-    - StepHolder
     - StepsManager
     - TransitionManager
     - UniversalControllerActions
+    - VideoMediaPlayer
+    - WaitThenDo
     - WaveVR_AdaptiveControllerActions
     - WaveVR_Beam
     - WaveVR_ButtonList
@@ -38,8 +43,6 @@ ScriptsOnlyBuild:
     - wvr.render.WaveVR_FoveatedRendering
     DOTween.dll:
     - DG.Tweening.Core.DOTweenSettings
-    Unity.Mobile.AndroidLogcat.Editor.dll:
-    - Unity.Android.Logcat.AndroidLogcatManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -50,7 +53,6 @@ ScriptsOnlyBuild:
     - TMPro.TextMeshProUGUI
     Unity.Timeline.Editor.dll:
     - UnityEditor.Timeline.SequenceHierarchy
-    - UnityEditor.Timeline.TimelineAssetViewModel
     - UnityEditor.Timeline.TimelineWindow
     Unity.Timeline.dll:
     - UnityEngine.Timeline.AudioPlayableAsset
@@ -64,8 +66,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -118,6 +122,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
+    - Class: 84
+      Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
     - Class: 91
@@ -133,125 +139,135 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11214}
     - Class: 114
-      Script: {instanceID: 11224}
+      Script: {instanceID: 11240}
     - Class: 114
-      Script: {instanceID: 11234}
+      Script: {instanceID: 11250}
     - Class: 114
-      Script: {instanceID: 11280}
+      Script: {instanceID: 11296}
     - Class: 114
-      Script: {instanceID: 11314}
+      Script: {instanceID: 11330}
     - Class: 114
-      Script: {instanceID: 11318}
+      Script: {instanceID: 11334}
     - Class: 114
-      Script: {instanceID: 11338}
+      Script: {instanceID: 11354}
     - Class: 114
-      Script: {instanceID: 11348}
+      Script: {instanceID: 11356}
     - Class: 114
-      Script: {instanceID: 11378}
+      Script: {instanceID: 11366}
     - Class: 114
-      Script: {instanceID: 11394}
+      Script: {instanceID: 11396}
     - Class: 114
-      Script: {instanceID: 11418}
+      Script: {instanceID: 11412}
     - Class: 114
-      Script: {instanceID: 11422}
+      Script: {instanceID: 11436}
     - Class: 114
-      Script: {instanceID: 11490}
+      Script: {instanceID: 11440}
     - Class: 114
-      Script: {instanceID: 11598}
+      Script: {instanceID: 11508}
     - Class: 114
       Script: {instanceID: 11616}
     - Class: 114
-      Script: {instanceID: 11624}
+      Script: {instanceID: 11634}
     - Class: 114
-      Script: {instanceID: 11648}
+      Script: {instanceID: 11642}
     - Class: 114
-      Script: {instanceID: 11692}
+      Script: {instanceID: 11666}
     - Class: 114
-      Script: {instanceID: 11702}
+      Script: {instanceID: 11710}
     - Class: 114
-      Script: {instanceID: 11792}
+      Script: {instanceID: 11720}
     - Class: 114
-      Script: {instanceID: 11818}
+      Script: {instanceID: 11810}
     - Class: 114
       Script: {instanceID: 11836}
     - Class: 114
-      Script: {instanceID: 11886}
+      Script: {instanceID: 11842}
     - Class: 114
-      Script: {instanceID: 11930}
+      Script: {instanceID: 11856}
     - Class: 114
-      Script: {instanceID: 11958}
+      Script: {instanceID: 11892}
     - Class: 114
-      Script: {instanceID: 12150}
+      Script: {instanceID: 11906}
     - Class: 114
-      Script: {instanceID: 12176}
+      Script: {instanceID: 11950}
     - Class: 114
-      Script: {instanceID: 12240}
+      Script: {instanceID: 11978}
     - Class: 114
-      Script: {instanceID: 12314}
+      Script: {instanceID: 11988}
     - Class: 114
-      Script: {instanceID: 12330}
+      Script: {instanceID: 12168}
     - Class: 114
-      Script: {instanceID: 12372}
+      Script: {instanceID: 12194}
     - Class: 114
-      Script: {instanceID: 12382}
+      Script: {instanceID: 12258}
+    - Class: 114
+      Script: {instanceID: 12332}
+    - Class: 114
+      Script: {instanceID: 12348}
+    - Class: 114
+      Script: {instanceID: 12350}
     - Class: 114
       Script: {instanceID: 12392}
     - Class: 114
-      Script: {instanceID: 12404}
+      Script: {instanceID: 12410}
     - Class: 114
-      Script: {instanceID: 12462}
+      Script: {instanceID: 12422}
     - Class: 114
-      Script: {instanceID: 12476}
+      Script: {instanceID: 12480}
     - Class: 114
-      Script: {instanceID: 12502}
+      Script: {instanceID: 12518}
     - Class: 114
-      Script: {instanceID: 12548}
+      Script: {instanceID: 12564}
     - Class: 114
-      Script: {instanceID: 12614}
-    - Class: 114
-      Script: {instanceID: 12642}
-    - Class: 114
-      Script: {instanceID: 12656}
+      Script: {instanceID: 12630}
     - Class: 114
       Script: {instanceID: 12658}
     - Class: 114
-      Script: {instanceID: 12744}
+      Script: {instanceID: 12672}
     - Class: 114
-      Script: {instanceID: 12872}
+      Script: {instanceID: 12674}
     - Class: 114
-      Script: {instanceID: 12878}
+      Script: {instanceID: 12760}
     - Class: 114
-      Script: {instanceID: 12932}
+      Script: {instanceID: 12888}
+    - Class: 114
+      Script: {instanceID: 12894}
     - Class: 114
       Script: {instanceID: 12948}
     - Class: 114
-      Script: {instanceID: 12962}
+      Script: {instanceID: 12964}
     - Class: 114
-      Script: {instanceID: 12994}
+      Script: {instanceID: 12978}
     - Class: 114
-      Script: {instanceID: 12996}
+      Script: {instanceID: 13010}
     - Class: 114
-      Script: {instanceID: 13058}
+      Script: {instanceID: 13012}
     - Class: 114
-      Script: {instanceID: 13064}
+      Script: {instanceID: 13074}
     - Class: 114
-      Script: {instanceID: 13108}
+      Script: {instanceID: 13080}
     - Class: 114
-      Script: {instanceID: 13132}
+      Script: {instanceID: 13124}
     - Class: 114
-      Script: {instanceID: 13284}
+      Script: {instanceID: 13148}
     - Class: 114
-      Script: {instanceID: 13304}
+      Script: {instanceID: 13190}
+    - Class: 114
+      Script: {instanceID: 13302}
     - Class: 114
       Script: {instanceID: 13322}
     - Class: 114
-      Script: {instanceID: 13328}
+      Script: {instanceID: 13340}
     - Class: 114
-      Script: {instanceID: 13370}
+      Script: {instanceID: 13346}
     - Class: 114
       Script: {instanceID: 13388}
     - Class: 114
-      Script: {instanceID: 13418}
+      Script: {instanceID: 13406}
+    - Class: 114
+      Script: {instanceID: 13436}
+    - Class: 114
+      Script: {instanceID: 21918}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -275,6 +291,10 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
     - Class: 320
+      Script: {instanceID: 0}
+    - Class: 328
+      Script: {instanceID: 0}
+    - Class: 329
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -337,6 +357,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UniversalControllerActions
+  - hash:
+      serializedVersion: 2
+      Hash: 7922bfa9cc1b3543463559f6ca20aaef
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MoveTo
   - hash:
       serializedVersion: 2
       Hash: 93e91972b369f08701dd73a428ea3c61
@@ -549,6 +575,12 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
+      Hash: 0bb58e5145ec7c1f15077c1e0e3d4e60
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WaitThenDo
+  - hash:
+      serializedVersion: 2
       Hash: 38e2449c64397a9b0f9f8ad4d2689efb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -567,7 +599,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 370407f1573987c3b45a409a829dadd9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: VideoMediaPlayer
@@ -609,6 +641,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
+      Hash: 30f3213a6e218a461fa00e428f22d3eb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AnimateIT
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -631,18 +669,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: WaveVR_PointerCameraTracker
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: StepController
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Dummy
   - hash:
       serializedVersion: 2
       Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
@@ -711,6 +737,12 @@ ScriptsOnlyBuild:
     className: StepsManager
   - hash:
       serializedVersion: 2
+      Hash: 19327004a8e881de1c6df47308c2b2b1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ReporterSystem
+  - hash:
+      serializedVersion: 2
       Hash: daa1da8fb6ec4f13af4f33997cc8be1c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -727,12 +759,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: WaveVR_PoseTrackerManager
-  - hash:
-      serializedVersion: 2
-      Hash: 7922bfa9cc1b3543463559f6ca20aaef
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MoveTo
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -771,13 +797,7 @@ ScriptsOnlyBuild:
     className: WaveVR_InputModuleManager
   - hash:
       serializedVersion: 2
-      Hash: c9a39fe0ea121a98fd1d3f3ed3b4e530
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: StepHolder
-  - hash:
-      serializedVersion: 2
-      Hash: cbbdebc4199b6a9749936e3dc5105641
+      Hash: 018b2554f29b3abf7b5ca6fe07a0567f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: QCMSystem
@@ -963,7 +983,7 @@ ScriptsOnlyBuild:
     className: WaveVR_RenderModel
   - hash:
       serializedVersion: 2
-      Hash: f62978f9a9ab8423034f05b4e7f23f16
+      Hash: bd78ddfbf361d98f5352274e0145cf4b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: QCMSystemExt
@@ -997,6 +1017,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: 6c8e9e4f2a53dbeea63734ae803c4b3b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: QCMCollection
   - hash:
       serializedVersion: 2
       Hash: 2d8f10c18f8ba7aa310e3daa22817d8d
@@ -1065,7 +1091,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
-      Hash: 8bff83e865ce357a1c3b1fb38447d334
+      Hash: 006a1804ef79a2fb5bc22dd2a75a820e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Interactable
@@ -1143,10 +1169,22 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
+      Hash: 866a0d0145bcb39e26cb83f6c46ad9d8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: StepManagerExt
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 31199c14cb6e3b9bc8f576ffdc6a08dd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: OnHit
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
