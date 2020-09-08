@@ -51,8 +51,8 @@ public class HandManager : MonoBehaviour
         if (value.tag == INTERACTABLE_TAG && transform.childCount == 0)
         {
             value.transform.SetParent(this.transform);
-            value.transform.localPosition = Vector3.zero;
-            value.transform.localRotation = Quaternion.Euler(0, 0, 0);
+            value.transform.localPosition = transform.localPosition;//Vector3.zero;
+            value.transform.localRotation = transform.localRotation;//Quaternion.Euler(0, 0, 0);
             value.GetComponent<Interactable>().OnGrab?.Invoke();
         }
     }
