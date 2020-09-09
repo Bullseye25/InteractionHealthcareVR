@@ -70,6 +70,7 @@
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUI.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUtils.cs" />
+    <Compile Include="Assets\Scripts\AppReset.cs" />
     <Compile Include="Assets\Scripts\EventSystem\AnimateIT.cs" />
     <Compile Include="Assets\Scripts\EventSystem\Fader.cs" />
     <Compile Include="Assets\Scripts\EventSystem\MoveTo.cs" />

@@ -8,6 +8,7 @@ TagManager:
   - scenario2
   - VRUIScreen
   - Interactable
+  - Pick
   layers:
   - Default
   - TransparentFX
