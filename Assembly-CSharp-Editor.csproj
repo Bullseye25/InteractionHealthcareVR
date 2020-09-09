@@ -695,6 +695,12 @@
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/Users/ammad/Documents/Git/InteractionHealthcareVR/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Recorder.Editor">
+      <HintPath>C:/Users/ammad/Documents/Git/InteractionHealthcareVR/Library/ScriptAssemblies/Unity.Recorder.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Recorder">
+      <HintPath>C:/Users/ammad/Documents/Git/InteractionHealthcareVR/Library/ScriptAssemblies/Unity.Recorder.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
