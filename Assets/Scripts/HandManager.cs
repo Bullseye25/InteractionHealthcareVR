@@ -25,7 +25,7 @@ public class HandManager : MonoBehaviour
 
     #region Unity Callbacks
 
-    private void Start()
+    public void OnEnable()
     {
         interactablesCollection = FindObjectsOfType<Interactable>();
     }
