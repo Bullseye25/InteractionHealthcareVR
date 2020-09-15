@@ -74,9 +74,10 @@ public class QCMSystem : MonoBehaviour
 
                 var ansButton = ans.transform.Find("Selection.Button");
                 ansButton.GetComponentInChildren<TextMeshProUGUI>().text = (selectables + 1).ToString();
-                var button = ansButton.GetComponent<Button>();
-                button.name = selectables.ToString();
-                button.onClick.AddListener(() => { OnSelectAnswer(answerHolder, button); });
+
+                //var button = ansButton.GetComponent<Button>();
+                ansButton.name = selectables.ToString();
+                ansButton.parent.GetComponent<Button>().onClick.AddListener(() => { OnSelectAnswer(answerHolder, ansButton); });
 
             }
         }
@@ -94,17 +95,17 @@ public class QCMSystem : MonoBehaviour
         }
     }
 
-    private void OnSelectAnswer(Transform parent, Button button)
+    private void OnSelectAnswer(Transform parent, Transform button)
     {
         qcmList.questions[currentQuestion].playerSelection = int.Parse(button.name);
 
         foreach(Transform _button in parent)
         {
-            var buttonImage = _button.transform.GetChild(0).GetComponent<Image>();
-            buttonImage.color = Color.white;
+            var buttonImage = _button.GetComponent<Image>();
+            buttonImage.color = Color.grey;
         }
 
-        button.image.color = Color.green;
+        button.transform.parent.GetComponent<Image>().color = Color.green;
     }
 
     public void Next()

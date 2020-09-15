@@ -4,6 +4,8 @@ using UnityEngine;
 using wvr;
 using WVR_Log;
 using DG.Tweening;
+using wvr.TypeExtensions;
+using System.Linq;
 
 public class HandManager : MonoBehaviour
 {
@@ -17,6 +19,7 @@ public class HandManager : MonoBehaviour
     private WVR_PoseState_t pose;
 
     [SerializeField] private Interactable[] interactablesCollection;
+    private WaveVR_RenderModel.ControllerHand hand;
 
     //[SerializeField] private WaveVR_Beam _beam = null;
     //[SerializeField] private WaveVR_ControllerPointer _pointer = null;
@@ -24,6 +27,11 @@ public class HandManager : MonoBehaviour
     #endregion
 
     #region Unity Callbacks
+
+    private void Start()
+    {
+        hand = eDevice == WaveVR_Controller.EDeviceType.Dominant ? WaveVR_RenderModel.ControllerHand.Controller_Dominant : WaveVR_RenderModel.ControllerHand.Controller_NonDominant;
+    }
 
     public void OnEnable()
     {
@@ -53,6 +61,7 @@ public class HandManager : MonoBehaviour
             value.transform.SetParent(this.transform);
             value.transform.localPosition = Vector3.zero;
             value.transform.localRotation = Quaternion.Euler(0, 0, 0);
+            ControllerAppearance(false);
             value.GetComponent<Interactable>().OnGrab?.Invoke();
         }
     }
@@ -103,6 +112,7 @@ public class HandManager : MonoBehaviour
             child.position = transform.position;
             child.rotation = Quaternion.Euler(0, 0, 0);
             child.localScale = new Vector3(1, 1, 1);
+            ControllerAppearance(true);
         }
     }
 
@@ -132,6 +142,57 @@ public class HandManager : MonoBehaviour
                 break;
             }
         }
+    }
+
+    /// <summary>
+    /// Will be used to enable and disable the controllers' appearance
+    /// </summary>
+    /// <param name="value"></param>
+    public void ControllerAppearance(bool value)
+    {
+        var renderModels = FindObjectsOfType<WaveVR_RenderModel>();
+
+        foreach (var rm in renderModels)
+            if (rm.WhichHand == hand)
+            {
+                var meshes = rm.GetComponentsInChildren<MeshRenderer>();
+                Debug.LogWarning("*** model children: " + rm.transform.childCount);
+                foreach (var mesh in meshes)
+                {
+                    mesh.enabled = value;
+                }
+
+                //var parent = rm.transform.parent;
+
+                var beams = FindObjectsOfType<WaveVR_Beam>();
+
+                foreach(var beam in beams)
+                {
+                    if(beam.device == WaveVR_Controller.EDeviceType.Dominant)
+                    {
+                        beam.ShowBeam = value;
+                        beam.enabled = value;
+                    }
+
+                    Debug.LogWarning("*** Beam children: " + beam.transform.childCount);
+                }
+
+                var pointers = FindObjectsOfType<WaveVR_ControllerPointer>();
+
+                foreach (var pointer in pointers)
+                {
+                    if (pointer.device == WaveVR_Controller.EDeviceType.Dominant)
+                    {
+                        pointer.ShowPointer = value;
+                        pointer.enabled = value;
+                    }
+
+                    Debug.LogWarning("*** Pointer children: " + pointer.transform.childCount);
+                }
+
+
+                break;
+            }
     }
 
     //private GameObject dominantController = null, nonDominantController = null;
