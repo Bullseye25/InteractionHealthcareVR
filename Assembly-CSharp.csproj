@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\AppReset.cs" />
     <Compile Include="Assets\Scripts\EventSystem\AnimateIT.cs" />
     <Compile Include="Assets\Scripts\EventSystem\Fader.cs" />
+    <Compile Include="Assets\Scripts\EventSystem\LocalPointReset.cs" />
     <Compile Include="Assets\Scripts\EventSystem\MoveTo.cs" />
     <Compile Include="Assets\Scripts\EventSystem\OnHit.cs" />
     <Compile Include="Assets\Scripts\EventSystem\StepManagerExt.cs" />

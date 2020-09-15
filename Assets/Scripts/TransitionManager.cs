@@ -10,7 +10,7 @@ public class TransitionManager : MonoBehaviour
     private Fader transition;
     [SerializeField] private MeshRenderer vrView;
     [SerializeField] private float fadeInTime, fadeOutTime, fadeInDelay, fadeOutDelay;
-    [SerializeField] private TextMeshProUGUI[] infoBars;
+    [SerializeField] private TextMeshProUGUI infoBars;
 
     private GameObject tempObjHolder;
 
@@ -28,28 +28,13 @@ public class TransitionManager : MonoBehaviour
     {
         transition = Fader.Instance;
 
-        PrepareInfoBar();
-
         gameObject.SetActive(false);
 
     }
 
-    private void PrepareInfoBar()
-    {
-        infoBars = new TextMeshProUGUI[vrView.transform.childCount];
-
-        for (int i = 0; i < infoBars.Length; i++)
-        {
-            infoBars[i] = vrView.transform.GetChild(i).GetComponent<TextMeshProUGUI>();
-        }
-    }
-
     public void InfoHolder(string information)
     {
-        foreach(var infoHolder in infoBars)
-        {
-            infoHolder.text = information;
-        }
+        infoBars.text = information;   
     }
 
     public void FadeIn()
@@ -66,11 +51,8 @@ public class TransitionManager : MonoBehaviour
     /// </summary>
     /// <param name="infoText"></param>
     private void VoidAreInfo(bool value)
-    {
-        foreach (var infoHolder in infoBars)
-        {
-            infoHolder.gameObject.SetActive(value);
-        }
+    {    
+        infoBars.gameObject.SetActive(value);
     }
 
     private IEnumerator DisableInfo()
