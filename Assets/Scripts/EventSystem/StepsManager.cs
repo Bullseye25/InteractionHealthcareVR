@@ -16,8 +16,11 @@ public class StepsManager : MonoBehaviour
 
     public static StepsManager Instance;
 
+    [SerializeField] private bool grabActiveSteps;
+
     private void Awake()
     {
+        GrabActiveSteps();
         Instance = this;
     }
 
@@ -54,5 +57,17 @@ public class StepsManager : MonoBehaviour
     {
         currentStep = -1;
         NextStep();
+    }
+
+    private void GrabActiveSteps()
+    {
+        if(grabActiveSteps == true)
+        foreach(Transform child in transform)
+        {
+            if (child.gameObject.activeInHierarchy)
+            {
+                steps.Add(child.GetComponent<Step>());
+            }
+        }
     }
 }

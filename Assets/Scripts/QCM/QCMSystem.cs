@@ -142,7 +142,7 @@ public class QCMSystem : MonoBehaviour
                 correctAnswers++;
         }
 
-        result.text = "Result: " + correctAnswers + " / " + totalQuestions;
+        result.text = "Résultat: " + correctAnswers + " / " + totalQuestions;
     }
 
     public void OnRetry()

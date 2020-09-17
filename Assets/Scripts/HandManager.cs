@@ -56,11 +56,23 @@ public class HandManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider value)
     {
-        if (value.tag == INTERACTABLE_TAG && transform.childCount == 0)
+        if (value.tag == INTERACTABLE_TAG && transform.childCount == 0 && value.transform.parent.GetComponent<HandManager>() == null)
         {
             value.transform.SetParent(this.transform);
             value.transform.localPosition = Vector3.zero;
-            value.transform.localRotation = Quaternion.Euler(0, 0, 0);
+            if(value.name == "Dictaphone" || value.name == "DossierPlanche")
+            {
+                value.transform.localRotation = Quaternion.Euler(0, 180, 0);
+            }
+            else if (value.name == "Smartphone")
+            {
+                value.transform.localRotation = Quaternion.Euler(-45, 180, 0);
+            }
+            else
+            {
+                value.transform.localRotation = Quaternion.Euler(0, 0, 0);
+            }
+
             ControllerAppearance(false);
             value.GetComponent<Interactable>().OnGrab?.Invoke();
         }
@@ -107,11 +119,14 @@ public class HandManager : MonoBehaviour
         if (releaseGesture == true && transform.childCount != 0) //transform.GetChild(0).gameObject != null)
         {
             var child = transform.GetChild(0);
-            child.GetComponent<Interactable>().SetInHand(false);
-            child.SetParent(null);
-            child.position = transform.position;
-            child.rotation = Quaternion.Euler(0, 0, 0);
-            child.localScale = new Vector3(1, 1, 1);
+            if (child.GetComponent<Interactable>() != null)
+            {
+                child.GetComponent<Interactable>().SetInHand(false);
+                child.SetParent(null);
+                child.position = transform.position;
+                child.rotation = Quaternion.Euler(0, 0, 0);
+                child.localScale = new Vector3(1, 1, 1);
+            }
             ControllerAppearance(true);
         }
     }
