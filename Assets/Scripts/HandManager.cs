@@ -6,6 +6,8 @@ using WVR_Log;
 using DG.Tweening;
 using wvr.TypeExtensions;
 using System.Linq;
+using System.IO.Pipes;
+using TMPro;
 
 public class HandManager : MonoBehaviour
 {
@@ -23,6 +25,9 @@ public class HandManager : MonoBehaviour
 
     //[SerializeField] private WaveVR_Beam _beam = null;
     //[SerializeField] private WaveVR_ControllerPointer _pointer = null;
+
+    private GameObject _child;
+    [SerializeField] private TextMeshProUGUI _value;
 
     #endregion
 
@@ -46,6 +51,14 @@ public class HandManager : MonoBehaviour
 
         PositionTracker();
         
+        if(_child != null)
+        {
+            _value.text = "x: " + _child.transform.parent.localRotation.x.ToString("0.##") +
+                " y: " + _child.transform.parent.localRotation.y.ToString("0.##") +
+                " z: " + _child.transform.parent.localRotation.z.ToString("0.##") +
+                " w: " + _child.transform.parent.localRotation.w.ToString("0.##");
+        }
+
         /*
                  if(_pointer != null)
                 {
@@ -54,24 +67,42 @@ public class HandManager : MonoBehaviour
         */
     }
 
+    private const string
+        DICTAPHONE = "Dictaphone",
+        DOSSIER_PLANCHE = "DossierPlanche",
+        SMARTPHONE = "Smartphone",
+        ECHOGRAPHY_DEVICE = "Ultrasound.Device";
+
     private void OnTriggerEnter(Collider value)
     {
         if (value.tag == INTERACTABLE_TAG && transform.childCount == 0 && value.transform.parent.GetComponent<HandManager>() == null)
         {
             value.transform.SetParent(this.transform);
             value.transform.localPosition = Vector3.zero;
-            if(value.name == "Dictaphone" || value.name == "DossierPlanche")
+            if(value.name == DICTAPHONE || value.name == DOSSIER_PLANCHE)
             {
                 value.transform.localRotation = Quaternion.Euler(0, 180, 0);
             }
-            else if (value.name == "Smartphone")
+            else if (value.name == SMARTPHONE)
             {
                 value.transform.localRotation = Quaternion.Euler(-45, 180, 0);
             }
-            else
+            else if (value.name == ECHOGRAPHY_DEVICE)
             {
-                value.transform.localRotation = Quaternion.Euler(0, 0, 0);
+                //(0,-23,0);
+                //(0,-40,0);
+                //(-40,0,0);
+                //(45,0,90);
+                //(45,90,0);
+
+                value.transform.localRotation = Quaternion.Euler(45f, 0, 0);
             }
+            //else
+            //{
+            //    value.transform.localRotation = Quaternion.Euler(0, 0, 0);
+            //}
+
+            _child = value.gameObject;
 
             ControllerAppearance(false);
             value.GetComponent<Interactable>().OnGrab?.Invoke();

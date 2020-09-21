@@ -63,7 +63,6 @@ ScriptsOnlyBuild:
     - TMPro.TextMeshProUGUI
     Unity.Timeline.Editor.dll:
     - UnityEditor.Timeline.SequenceHierarchy
-    - UnityEditor.Timeline.TimelineAssetViewModel
     - UnityEditor.Timeline.TimelineWindow
     Unity.Timeline.dll:
     - UnityEngine.Timeline.AudioPlayableAsset
@@ -119,11 +118,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 43
       Script: {instanceID: 0}
+    - Class: 45
+      Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
     - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
@@ -990,7 +993,7 @@ ScriptsOnlyBuild:
     className: BundlePreviewLoader
   - hash:
       serializedVersion: 2
-      Hash: 51b07e2f812c3360f7f5525660aa533c
+      Hash: 6971f9fdae7f8f9572b747fd353c202e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HandManager
@@ -1237,4 +1240,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/ammad/Documents/Build Holder/HC Build/6 Freedom_SVODVRXP_2020_09_16.apk
+  playerPath: C:/Users/ammad/Documents/Build Holder/HC Build/Test.apk

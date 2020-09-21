@@ -9,13 +9,18 @@ public class AppManager : MonoBehaviour
 
     private void OnApplicationPause(bool _pause)
     {
-        if(pause == true && _pause == false)
+        if (pause == true && _pause == false)
         {
             pause = false;
-            SceneManager.LoadScene(0);
+            AppReset();
         }
 
         if (_pause == true)
             pause = true;
+    }
+
+    public void AppReset()
+    {
+        SceneManager.LoadScene(0);
     }
 }
