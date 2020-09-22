@@ -15,6 +15,7 @@ public class QCMSystem : MonoBehaviour
     [SerializeField] private GameObject answerPrefab;
     [SerializeField] private Transform questionHolder;
     [SerializeField] private TextMeshProUGUI result;
+    [SerializeField] GameObject next, back;
     private GameObject[] quiz;
     private int currentQuestion = 0;
     private GameObject tempObjHolder;
@@ -80,6 +81,12 @@ public class QCMSystem : MonoBehaviour
                 ansButton.parent.GetComponent<Button>().onClick.AddListener(() => { OnSelectAnswer(answerHolder, ansButton); });
 
             }
+        }
+
+        if (quiz.Length > 1)
+        {
+            back.SetActive(true);
+            next.SetActive(true);
         }
     }
 

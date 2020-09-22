@@ -6,13 +6,14 @@ using UnityEngine.SceneManagement;
 public class AppManager : MonoBehaviour
 {
     private bool pause = false;
+    [SerializeField] private GameObject appMenu;
 
     private void OnApplicationPause(bool _pause)
     {
         if (pause == true && _pause == false)
         {
             pause = false;
-            AppReset();
+            appMenu.SetActive(true);
         }
 
         if (_pause == true)

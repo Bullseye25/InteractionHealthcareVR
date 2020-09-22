@@ -72,6 +72,7 @@
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUtils.cs" />
     <Compile Include="Assets\Scripts\AppManager.cs" />
     <Compile Include="Assets\Scripts\AppReset.cs" />
+    <Compile Include="Assets\Scripts\Echography.Machine\PanelManager.cs" />
     <Compile Include="Assets\Scripts\EventSystem\AnimateIT.cs" />
     <Compile Include="Assets\Scripts\EventSystem\Fader.cs" />
     <Compile Include="Assets\Scripts\EventSystem\LocalPointReset.cs" />

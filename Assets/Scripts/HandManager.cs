@@ -26,9 +26,6 @@ public class HandManager : MonoBehaviour
     //[SerializeField] private WaveVR_Beam _beam = null;
     //[SerializeField] private WaveVR_ControllerPointer _pointer = null;
 
-    private GameObject _child;
-    [SerializeField] private TextMeshProUGUI _value;
-
     #endregion
 
     #region Unity Callbacks
@@ -50,14 +47,6 @@ public class HandManager : MonoBehaviour
         Release();
 
         PositionTracker();
-        
-        if(_child != null)
-        {
-            _value.text = "x: " + _child.transform.parent.localRotation.x.ToString("0.##") +
-                " y: " + _child.transform.parent.localRotation.y.ToString("0.##") +
-                " z: " + _child.transform.parent.localRotation.z.ToString("0.##") +
-                " w: " + _child.transform.parent.localRotation.w.ToString("0.##");
-        }
 
         /*
                  if(_pointer != null)
@@ -101,8 +90,6 @@ public class HandManager : MonoBehaviour
             //{
             //    value.transform.localRotation = Quaternion.Euler(0, 0, 0);
             //}
-
-            _child = value.gameObject;
 
             ControllerAppearance(false);
             value.GetComponent<Interactable>().OnGrab?.Invoke();

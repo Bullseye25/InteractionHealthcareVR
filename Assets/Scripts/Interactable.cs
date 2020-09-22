@@ -14,7 +14,7 @@ public class Interactable : MonoBehaviour
 
     [SerializeField] private MeshRenderer mRenderer;
     [SerializeField] private Texture texture;
-
+    [SerializeField] private bool inactiveHighlighter;
     [SerializeField] private Material highlighterRef;
     private Material highlighter;
 
@@ -60,6 +60,10 @@ public class Interactable : MonoBehaviour
             return;
 
         pointerEnter = onPointerEnter;
+
+        if (inactiveHighlighter == true)
+            return;
+
         highlighter.DOFloat(onPointerEnter == true ? 0 : maxOutlineSize, HIGHLIGHTER_PROPERTY_OUTLINE_RANGE, highlightDelay);
     }
 
@@ -107,6 +111,9 @@ public class Interactable : MonoBehaviour
 
     private void PrepareHighlighter()
     {
+        if (inactiveHighlighter == true)
+            return;
+
         highlighter = new Material(highlighterRef)
         {
             name = "HIGHLIGHTER"
