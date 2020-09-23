@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     #region Private Variables
-    private StepsManager stepsManager;
+    [SerializeField] private StepsManager stepsManager;
 
     [SerializeField] private string[] scenarioTag;
     #endregion
@@ -20,10 +20,6 @@ public class GameManager : MonoBehaviour
         Instance = this;
     }
 
-    private void Start()
-    {
-        stepsManager = StepsManager.Instance;
-    }
     #endregion
 
     #region Event Functions
