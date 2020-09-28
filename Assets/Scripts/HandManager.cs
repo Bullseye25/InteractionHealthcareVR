@@ -44,7 +44,7 @@ public class HandManager : MonoBehaviour
     {
         Grab();
 
-        Release();
+        //Release();
 
         PositionTracker();
 
@@ -78,12 +78,6 @@ public class HandManager : MonoBehaviour
             }
             else if (value.name == ECHOGRAPHY_DEVICE)
             {
-                //(0,-23,0);
-                //(0,-40,0);
-                //(-40,0,0);
-                //(45,0,90);
-                //(45,90,0);
-
                 value.transform.localRotation = Quaternion.Euler(45f, 0, 0);
             }
             //else

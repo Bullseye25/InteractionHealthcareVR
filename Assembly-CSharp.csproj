@@ -70,6 +70,7 @@
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUI.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\DOTween\Modules\DOTweenModuleUtils.cs" />
+    <Compile Include="Assets\QuickOutline\Scripts\Outliner.cs" />
     <Compile Include="Assets\Scripts\AppManager.cs" />
     <Compile Include="Assets\Scripts\AppReset.cs" />
     <Compile Include="Assets\Scripts\Echography.Machine\PanelManager.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Assets\Scripts\QCM\QCMSystemExt.cs" />
     <Compile Include="Assets\Scripts\QCM\QuestionEntity.cs" />
     <Compile Include="Assets\Scripts\Reporter-Window\ReporterSystem.cs" />
+    <Compile Include="Assets\Scripts\SkipDummy\SkipControll.cs" />
     <Compile Include="Assets\Scripts\Step.cs" />
     <Compile Include="Assets\Scripts\TransitionManager.cs" />
     <Compile Include="Assets\WaveVR\Extra\Beam.cs" />
@@ -196,6 +198,7 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\WaveVR\Resources\WaveVR_Distortion.shader" />
     <None Include="Assets\WaveVR\Resources\AlwaysOnTopShader.shader" />
+    <None Include="Assets\QuickOutline\Resources\Shaders\OutlineMask.shader" />
     <None Include="Assets\WaveVR\Resources\WaveVR_RenderMask.shader" />
     <None Include="Assets\WaveVR\Resources\WaveVR_CtrlrPointer.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
@@ -209,6 +212,7 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\QuickOutline\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Shaders\Characters\ArnoCharactersMedium_Hair.shader" />
@@ -220,6 +224,7 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\WaveVR\Font\NOTICE.txt" />
+    <None Include="Assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />

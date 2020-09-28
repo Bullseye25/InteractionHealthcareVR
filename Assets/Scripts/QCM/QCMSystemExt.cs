@@ -55,12 +55,6 @@ public class QCMSystemExt : QCMSystem
             sizeMini = true;
         }
 
-
-/*        rect.anchoredPosition = Vector3.zero;
-        rect.localPosition = Vector3.zero;
-        rect.localRotation = Quaternion.Euler(0, 0, 0);
-        rect.sizeDelta = Vector3.zero;*/
-
         rect.DOAnchorPos(Vector3.zero, moveSpeed);
         rect.DOLocalMove(Vector3.zero, moveSpeed);
         rect.DOLocalRotate(Vector3.zero, moveSpeed);

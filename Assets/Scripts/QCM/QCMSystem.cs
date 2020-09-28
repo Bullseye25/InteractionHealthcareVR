@@ -45,7 +45,7 @@ public class QCMSystem : MonoBehaviour
         for(int i = 0; i < qcmList.questions.Length; i++)
         {
             var question = qcmList.questions[i];
-
+            question.playerSelection = -1;
             var _quiz = Instantiate(quizPrefab, quizPrefab.transform.position, quizPrefab.transform.rotation);
             _quiz.transform.SetParent(questionHolder);
             var rect = _quiz.GetComponent<RectTransform>();
@@ -88,6 +88,9 @@ public class QCMSystem : MonoBehaviour
             back.SetActive(true);
             next.SetActive(true);
         }
+
+
+        result.text = "Résultat: " + 0 + " / " + qcmList.questions.Length;
     }
 
     public void ClearQCM()

@@ -12,11 +12,13 @@ ScriptsOnlyBuild:
     - LocalPointReset
     - MoveTo
     - OnHit
+    - Outliner
     - PanelManager
     - QCMCollection
     - QCMSystemExt
     - ReporterSystem
     - RingMeshDrawer
+    - SkipControll
     - Step
     - StepsManager
     - TransitionManager
@@ -46,6 +48,8 @@ ScriptsOnlyBuild:
     - wvr.render.WaveVR_FoveatedRendering
     DOTween.dll:
     - DG.Tweening.Core.DOTweenSettings
+    Unity.Mobile.AndroidLogcat.Editor.dll:
+    - Unity.Android.Logcat.AndroidLogcatManager
     Unity.Recorder.Editor.dll:
     - UnityEditor.Recorder.MovieRecorderEditor
     - UnityEditor.Recorder.MovieRecorderSettings
@@ -62,7 +66,6 @@ ScriptsOnlyBuild:
     - TMPro.TextMeshProUGUI
     Unity.Timeline.Editor.dll:
     - UnityEditor.Timeline.SequenceHierarchy
-    - UnityEditor.Timeline.TimelineAssetViewModel
     - UnityEditor.Timeline.TimelineWindow
     Unity.Timeline.dll:
     - UnityEngine.Timeline.AudioPlayableAsset
@@ -76,8 +79,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -291,6 +296,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13800}
     - Class: 114
       Script: {instanceID: 13834}
+    - Class: 114
+      Script: {instanceID: 79636}
+    - Class: 114
+      Script: {instanceID: 207662}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -344,7 +353,7 @@ ScriptsOnlyBuild:
     className: Text
   - hash:
       serializedVersion: 2
-      Hash: 7af77f3b4f0dda937bb2a48b48186e54
+      Hash: 6cccaeffa8bf688a774699821831bb05
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -1242,7 +1251,19 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 9afd8cd7a4cba17088cec5cf3b6b4c40
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SkipControll
+  - hash:
+      serializedVersion: 2
+      Hash: ff7f58b226cfe4de0dc241bd88d5a904
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Outliner
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/ammad/Documents/Build Holder/HC Build/6 Freedom_SVODVRXP_2020_09_22.apk
+  playerPath: C:/Users/ammad/Documents/Build Holder/HC Build/6 Freedom_SVODVRXP_2020_09_24.apk
