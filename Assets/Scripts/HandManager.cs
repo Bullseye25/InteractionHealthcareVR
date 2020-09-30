@@ -105,9 +105,14 @@ public class HandManager : MonoBehaviour
         if (eDevice != WaveVR_Controller.EDeviceType.Dominant)
             return;
 
-        var grabGesture = WaveVR_Controller.Input(WaveVR_Controller.EDeviceType.Dominant).GetPressDown(wvr.WVR_InputId.WVR_InputId_Alias1_Trigger);
+        bool grabGesture;
 
-        //var grabGesture = Input.GetKeyDown(KeyCode.Space);
+        if (Application.platform == RuntimePlatform.WindowsEditor)
+             grabGesture = Input.GetKeyDown(KeyCode.Space);
+        else
+             grabGesture = WaveVR_Controller.Input(WaveVR_Controller.EDeviceType.Dominant).GetPressDown(wvr.WVR_InputId.WVR_InputId_Alias1_Trigger);
+
+
 
         if (grabGesture == true)
         {

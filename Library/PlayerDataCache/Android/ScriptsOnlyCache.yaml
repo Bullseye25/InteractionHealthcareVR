@@ -48,8 +48,6 @@ ScriptsOnlyBuild:
     - wvr.render.WaveVR_FoveatedRendering
     DOTween.dll:
     - DG.Tweening.Core.DOTweenSettings
-    Unity.Mobile.AndroidLogcat.Editor.dll:
-    - Unity.Android.Logcat.AndroidLogcatManager
     Unity.Recorder.Editor.dll:
     - UnityEditor.Recorder.MovieRecorderEditor
     - UnityEditor.Recorder.MovieRecorderSettings
@@ -79,10 +77,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -157,149 +153,149 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11334}
-    - Class: 114
-      Script: {instanceID: 11336}
-    - Class: 114
       Script: {instanceID: 11338}
     - Class: 114
-      Script: {instanceID: 11348}
+      Script: {instanceID: 11340}
     - Class: 114
-      Script: {instanceID: 11410}
+      Script: {instanceID: 11342}
     - Class: 114
-      Script: {instanceID: 11448}
+      Script: {instanceID: 11352}
+    - Class: 114
+      Script: {instanceID: 11414}
     - Class: 114
       Script: {instanceID: 11452}
     - Class: 114
-      Script: {instanceID: 11460}
+      Script: {instanceID: 11456}
     - Class: 114
-      Script: {instanceID: 11474}
+      Script: {instanceID: 11464}
     - Class: 114
-      Script: {instanceID: 11476}
+      Script: {instanceID: 11478}
     - Class: 114
-      Script: {instanceID: 11486}
+      Script: {instanceID: 11480}
     - Class: 114
-      Script: {instanceID: 11518}
+      Script: {instanceID: 11490}
     - Class: 114
-      Script: {instanceID: 11540}
+      Script: {instanceID: 11522}
     - Class: 114
-      Script: {instanceID: 11566}
+      Script: {instanceID: 11544}
     - Class: 114
       Script: {instanceID: 11570}
     - Class: 114
-      Script: {instanceID: 11644}
+      Script: {instanceID: 11574}
     - Class: 114
-      Script: {instanceID: 11756}
+      Script: {instanceID: 11648}
     - Class: 114
-      Script: {instanceID: 11758}
+      Script: {instanceID: 11760}
     - Class: 114
-      Script: {instanceID: 11780}
+      Script: {instanceID: 11762}
     - Class: 114
-      Script: {instanceID: 11788}
+      Script: {instanceID: 11784}
     - Class: 114
-      Script: {instanceID: 11814}
+      Script: {instanceID: 11792}
     - Class: 114
-      Script: {instanceID: 11862}
+      Script: {instanceID: 11818}
     - Class: 114
-      Script: {instanceID: 11872}
+      Script: {instanceID: 11866}
     - Class: 114
-      Script: {instanceID: 11970}
+      Script: {instanceID: 11876}
     - Class: 114
-      Script: {instanceID: 11996}
+      Script: {instanceID: 11974}
     - Class: 114
-      Script: {instanceID: 12002}
+      Script: {instanceID: 12000}
     - Class: 114
-      Script: {instanceID: 12026}
+      Script: {instanceID: 12006}
     - Class: 114
-      Script: {instanceID: 12064}
+      Script: {instanceID: 12030}
     - Class: 114
-      Script: {instanceID: 12080}
+      Script: {instanceID: 12068}
     - Class: 114
-      Script: {instanceID: 12128}
+      Script: {instanceID: 12084}
     - Class: 114
-      Script: {instanceID: 12174}
+      Script: {instanceID: 12132}
     - Class: 114
-      Script: {instanceID: 12184}
+      Script: {instanceID: 12178}
     - Class: 114
-      Script: {instanceID: 12390}
+      Script: {instanceID: 12188}
     - Class: 114
-      Script: {instanceID: 12416}
+      Script: {instanceID: 12394}
     - Class: 114
-      Script: {instanceID: 12442}
+      Script: {instanceID: 12420}
     - Class: 114
-      Script: {instanceID: 12492}
+      Script: {instanceID: 12446}
     - Class: 114
-      Script: {instanceID: 12578}
+      Script: {instanceID: 12496}
     - Class: 114
-      Script: {instanceID: 12594}
+      Script: {instanceID: 12582}
     - Class: 114
-      Script: {instanceID: 12596}
+      Script: {instanceID: 12598}
     - Class: 114
-      Script: {instanceID: 12640}
+      Script: {instanceID: 12600}
     - Class: 114
-      Script: {instanceID: 12658}
+      Script: {instanceID: 12644}
     - Class: 114
-      Script: {instanceID: 12670}
+      Script: {instanceID: 12662}
     - Class: 114
-      Script: {instanceID: 12724}
+      Script: {instanceID: 12674}
     - Class: 114
-      Script: {instanceID: 12742}
+      Script: {instanceID: 12728}
     - Class: 114
-      Script: {instanceID: 12788}
+      Script: {instanceID: 12746}
     - Class: 114
-      Script: {instanceID: 12838}
+      Script: {instanceID: 12792}
     - Class: 114
-      Script: {instanceID: 12910}
+      Script: {instanceID: 12842}
     - Class: 114
-      Script: {instanceID: 12942}
+      Script: {instanceID: 12914}
     - Class: 114
-      Script: {instanceID: 12958}
+      Script: {instanceID: 12946}
     - Class: 114
-      Script: {instanceID: 12960}
+      Script: {instanceID: 12962}
     - Class: 114
-      Script: {instanceID: 13058}
+      Script: {instanceID: 12964}
     - Class: 114
-      Script: {instanceID: 13202}
+      Script: {instanceID: 13062}
     - Class: 114
-      Script: {instanceID: 13210}
+      Script: {instanceID: 13186}
     - Class: 114
-      Script: {instanceID: 13268}
+      Script: {instanceID: 13208}
     - Class: 114
-      Script: {instanceID: 13286}
+      Script: {instanceID: 13216}
     - Class: 114
-      Script: {instanceID: 13302}
+      Script: {instanceID: 13274}
     - Class: 114
-      Script: {instanceID: 13344}
+      Script: {instanceID: 13292}
     - Class: 114
-      Script: {instanceID: 13346}
+      Script: {instanceID: 13308}
     - Class: 114
-      Script: {instanceID: 13424}
+      Script: {instanceID: 13350}
     - Class: 114
-      Script: {instanceID: 13432}
+      Script: {instanceID: 13352}
     - Class: 114
-      Script: {instanceID: 13490}
+      Script: {instanceID: 13430}
     - Class: 114
-      Script: {instanceID: 13518}
+      Script: {instanceID: 13438}
     - Class: 114
-      Script: {instanceID: 13564}
+      Script: {instanceID: 13496}
     - Class: 114
-      Script: {instanceID: 13686}
+      Script: {instanceID: 13524}
     - Class: 114
-      Script: {instanceID: 13700}
+      Script: {instanceID: 13570}
     - Class: 114
-      Script: {instanceID: 13712}
+      Script: {instanceID: 13692}
     - Class: 114
-      Script: {instanceID: 13734}
+      Script: {instanceID: 13704}
     - Class: 114
-      Script: {instanceID: 13782}
+      Script: {instanceID: 13708}
     - Class: 114
-      Script: {instanceID: 13800}
+      Script: {instanceID: 13720}
     - Class: 114
-      Script: {instanceID: 13834}
+      Script: {instanceID: 13742}
     - Class: 114
-      Script: {instanceID: 79636}
+      Script: {instanceID: 13790}
     - Class: 114
-      Script: {instanceID: 207662}
+      Script: {instanceID: 13808}
+    - Class: 114
+      Script: {instanceID: 13842}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -971,6 +967,12 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: ff7f58b226cfe4de0dc241bd88d5a904
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Outliner
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1139,6 +1141,12 @@ ScriptsOnlyBuild:
     className: WaveVR_ControllerPointer
   - hash:
       serializedVersion: 2
+      Hash: 9afd8cd7a4cba17088cec5cf3b6b4c40
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SkipControll
+  - hash:
+      serializedVersion: 2
       Hash: 31199c14cb6e3b9bc8f576ffdc6a08dd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1251,19 +1259,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 9afd8cd7a4cba17088cec5cf3b6b4c40
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SkipControll
-  - hash:
-      serializedVersion: 2
-      Hash: ff7f58b226cfe4de0dc241bd88d5a904
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Outliner
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/ammad/Documents/Build Holder/HC Build/6 Freedom_SVODVRXP_2020_09_24.apk
+  playerPath: C:/Users/ammad/Documents/Build Holder/HC Build/6 Freedom_SVODVRXP_2020_09_30.apk

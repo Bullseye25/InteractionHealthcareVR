@@ -21,6 +21,15 @@ public class QCMSystemExt : QCMSystem
         base.Start();
 
         rect = GetComponent<RectTransform>() != null ? GetComponent<RectTransform>() : null;
+
+        OnEnable();
+    }
+
+    public void OnEnable()
+    {
+        questionHolder.gameObject.SetActive(true);
+
+        MaxMini(null);
     }
 
     #endregion

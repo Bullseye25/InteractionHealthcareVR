@@ -799,6 +799,9 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>C:/Users/ammad/Documents/Git/InteractionHealthcareVR/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>C:/Users/ammad/Documents/Git/InteractionHealthcareVR/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Mobile.AndroidLogcat.Editor">
       <HintPath>C:/Users/ammad/Documents/Git/InteractionHealthcareVR/Library/ScriptAssemblies/Unity.Mobile.AndroidLogcat.Editor.dll</HintPath>
     </Reference>

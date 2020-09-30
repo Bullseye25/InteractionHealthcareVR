@@ -44,7 +44,7 @@ public class StepsManager : MonoBehaviour
             steps[currentStep].OnStepEnd?.Invoke();
 
         currentStep++;
-        Debug.LogWarning($"Current step is now Step {currentStep}.");
+        Debug.LogWarning($"Current step is now Step {steps[currentStep].gameObject.name}."); 
 
         if (currentStep < steps.Count)
         {

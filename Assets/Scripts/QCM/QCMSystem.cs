@@ -13,7 +13,7 @@ public class QCMSystem : MonoBehaviour
     private QCMCollection qcmList;
     [SerializeField] private GameObject quizPrefab;
     [SerializeField] private GameObject answerPrefab;
-    [SerializeField] private Transform questionHolder;
+    [SerializeField] protected Transform questionHolder;
     [SerializeField] private TextMeshProUGUI result;
     [SerializeField] GameObject next, back;
     private GameObject[] quiz;
@@ -90,7 +90,8 @@ public class QCMSystem : MonoBehaviour
         }
 
 
-        result.text = "Résultat: " + 0 + " / " + qcmList.questions.Length;
+        if(result != null)
+            result.text = "Résultat: " + 0 + " / " + qcmList.questions.Length;
     }
 
     public void ClearQCM()
@@ -152,7 +153,8 @@ public class QCMSystem : MonoBehaviour
                 correctAnswers++;
         }
 
-        result.text = "Résultat: " + correctAnswers + " / " + totalQuestions;
+        if (result != null)
+            result.text = "Résultat: " + correctAnswers + " / " + totalQuestions;
     }
 
     public void OnRetry()
