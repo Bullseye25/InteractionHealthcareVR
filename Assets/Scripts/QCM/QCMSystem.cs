@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.Events;
@@ -10,13 +8,17 @@ public class QCMSystem : MonoBehaviour
     public UnityEvent OnProceed;
 
     #region Private Variables
-    private QCMCollection qcmList;
-    [SerializeField] private GameObject quizPrefab;
-    [SerializeField] private GameObject answerPrefab;
+    private const string
+        QUESTION_TEXT_TITLE = "Question.Holder",
+        ANSWER_TEXT_TITLE = "Answer.Text",
+        SELECTION_BUTTON_TITLE = "Selection.Button",
+        ANSWERS_HOLDER_PATH = "Answer.Holder/ScrollView/Viewport/Content";
+
+    private QCMCollection qcmEntity;
+    [SerializeField] private GameObject quizPrefab, answerPrefab, next, back;
     [SerializeField] protected Transform questionHolder;
-    [SerializeField] private TextMeshProUGUI result;
-    [SerializeField] GameObject next, back;
-    private GameObject[] quiz;
+    [SerializeField] private Sprite defaultButtonSprite, SelectionButtonSprite;
+    private GameObject[] quizzes;
     private int currentQuestion = 0;
     private GameObject tempObjHolder;
     private TransitionManager transition;
@@ -30,76 +32,76 @@ public class QCMSystem : MonoBehaviour
     #endregion
 
     #region Event Functions
-    public void ApplyQCM(QCMCollection qcm)
+    public void ApplyQCM(QCMCollection _qcmEntity)
     {
-        qcmList = qcm;
+        qcmEntity = _qcmEntity;
     }
 
     public void GenerateQCM()
     {
-        if (qcmList == null)
+        if (qcmEntity == null)
             return;
 
-        quiz = new GameObject[qcmList.questions.Length];
+        quizzes = new GameObject[qcmEntity.questions.Length];
 
-        for(int i = 0; i < qcmList.questions.Length; i++)
+        for(int i = 0; i < qcmEntity.questions.Length; i++)
         {
-            var question = qcmList.questions[i];
-            question.playerSelection = -1;
-            var _quiz = Instantiate(quizPrefab, quizPrefab.transform.position, quizPrefab.transform.rotation);
-            _quiz.transform.SetParent(questionHolder);
-            var rect = _quiz.GetComponent<RectTransform>();
+            #region Create Quiz Prefab
+            var questionEntity = qcmEntity.questions[i];
+            questionEntity.playerSelection = -1;
+            var quiz = Instantiate(quizPrefab, quizPrefab.transform.position, quizPrefab.transform.rotation);
+            quiz.transform.SetParent(questionHolder);
+            var rect = quiz.GetComponent<RectTransform>();
             rect.offsetMax = Vector2.zero;
             rect.offsetMin = Vector2.zero;
-            quiz[i] = _quiz;
+            quizzes[i] = quiz;
+            quiz.SetActive(i == 0 ? true : false);
+            #endregion
 
-            if (i != 0)
-                _quiz.SetActive(false);
-            else
-                _quiz.SetActive(true);
+            #region Apply Question
+            var question = quiz.transform.Find(QUESTION_TEXT_TITLE).GetComponent<TextMeshProUGUI>();
+            question.text = questionEntity.question;
+            #endregion
 
-            var questionArea = _quiz.transform.Find("Question.Holder").GetComponent<TextMeshProUGUI>();
-            questionArea.text = question.question;
+            var answersHolder = quiz.transform.Find(ANSWERS_HOLDER_PATH);
 
-            var answerHolder = _quiz.transform.Find("Answer.Holder/ScrollView/Viewport/Content");
-
-            for (int selectables = 0; selectables < question.answers.Length; selectables++)
+            for (int index = 0; index < questionEntity.answers.Length; index++)
             {
-                string answer = question.answers[selectables];
-                var ans = Instantiate(answerPrefab, answerPrefab.transform.position, answerPrefab.transform.rotation);
-                ans.transform.SetParent(answerHolder);
-                ans.SetActive(true);
+                #region Create Answer Prefab
+                string answerEntity = questionEntity.answers[index];
+                var _answerPrefab = Instantiate(answerPrefab, answerPrefab.transform.position, answerPrefab.transform.rotation);
+                _answerPrefab.transform.SetParent(answersHolder);
+                _answerPrefab.SetActive(true);
+                #endregion
 
-                var ansText = ans.transform.Find("Answer.Text").GetComponent<TextMeshProUGUI>();
-                ansText.text = answer;
+                #region Apply Answer
+                var answer = _answerPrefab.transform.Find(ANSWER_TEXT_TITLE).GetComponent<TextMeshProUGUI>();
+                answer.text = answerEntity;
+                #endregion
 
-                var ansButton = ans.transform.Find("Selection.Button");
-                ansButton.GetComponentInChildren<TextMeshProUGUI>().text = (selectables + 1).ToString();
-
-                //var button = ansButton.GetComponent<Button>();
-                ansButton.name = selectables.ToString();
-                ansButton.parent.GetComponent<Button>().onClick.AddListener(() => { OnSelectAnswer(answerHolder, ansButton); });
-
+                #region Prepare the Selection Button
+                var selectionButton = _answerPrefab.transform.Find(SELECTION_BUTTON_TITLE);
+                selectionButton.GetComponentInChildren<TextMeshProUGUI>().text = (index + 1).ToString();
+                selectionButton.name = index.ToString();
+                selectionButton.parent.GetComponent<Button>().onClick.AddListener(() => { OnSelectAnswer(answersHolder, selectionButton); });
+                #endregion
             }
         }
 
-        if (quiz.Length > 1)
+
+        if (quizzes.Length > 1)
         {
             back.SetActive(true);
             next.SetActive(true);
         }
-
-
-        if(result != null)
-            result.text = "Résultat: " + 0 + " / " + qcmList.questions.Length;
     }
 
     public void ClearQCM()
     {
-        if (quiz == null)
+        if (quizzes == null)
             return;
 
-        foreach(var question in quiz)
+        foreach(var question in quizzes)
         {
             //TODO: Apply object-pooling and reuse the already created gameobjects(questions) 
             Destroy(question);
@@ -108,25 +110,26 @@ public class QCMSystem : MonoBehaviour
 
     private void OnSelectAnswer(Transform parent, Transform button)
     {
-        qcmList.questions[currentQuestion].playerSelection = int.Parse(button.name);
+        //Update QCM with player selection
+        //qcmEntity.questions[currentQuestion].playerSelection = int.Parse(button.name);
 
-        foreach(Transform _button in parent)
-        {
-            var buttonImage = _button.GetComponent<Image>();
-            buttonImage.color = Color.grey;
-        }
+        //foreach(Transform _button in parent)
+        //{
+        //    var buttonImage = _button.GetChild(0).GetComponent<Image>();
+        //    buttonImage.color = defaultButton;
+        //}
 
-        button.transform.parent.GetComponent<Image>().color = Color.green;
+        button.transform.parent.GetChild(0).GetComponent<Image>().sprite = SelectionButtonSprite;
     }
 
     public void Next()
     {
-        if ((currentQuestion + 1) >= qcmList.questions.Length)
+        if ((currentQuestion + 1) >= qcmEntity.questions.Length)
             return;
 
-        quiz[currentQuestion].SetActive(false);
+        quizzes[currentQuestion].SetActive(false);
         currentQuestion++;
-        quiz[currentQuestion].SetActive(true);
+        quizzes[currentQuestion].SetActive(true);
     }
 
     public void Back()
@@ -134,27 +137,28 @@ public class QCMSystem : MonoBehaviour
         if ((currentQuestion - 1) < 0)
             return;
 
-        quiz[currentQuestion].SetActive(false);
+        quizzes[currentQuestion].SetActive(false);
     
         if(currentQuestion!=0)
             currentQuestion--;
         
-        quiz[currentQuestion].SetActive(true);
+        quizzes[currentQuestion].SetActive(true);
     }
 
     public void GetResult()
     {
-        int totalQuestions = qcmList.questions.Length;
-        int correctAnswers = 0;
+        var correctAnswerIndex = qcmEntity.questions[currentQuestion].correctAnswer;
 
-        foreach(var answer in qcmList.questions)
+        var question = quizzes[currentQuestion];
+
+        var answersHolder = question.transform.Find(ANSWERS_HOLDER_PATH);
+
+        foreach(Transform answer in answersHolder)
         {
-            if (answer.IsCorrect())
-                correctAnswers++;
+            answer.GetChild(0).GetComponent<Image>().sprite = defaultButtonSprite;
         }
 
-        if (result != null)
-            result.text = "Résultat: " + correctAnswers + " / " + totalQuestions;
+        answersHolder.GetChild(correctAnswerIndex).GetChild(0).GetComponent<Image>().sprite = SelectionButtonSprite;
     }
 
     public void OnRetry()

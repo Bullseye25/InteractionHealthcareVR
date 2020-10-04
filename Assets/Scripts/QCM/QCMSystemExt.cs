@@ -7,9 +7,10 @@ using DG.Tweening;
 public class QCMSystemExt : QCMSystem
 {
     #region Private Variables
+    [Header("Minimize & Maximize")]
+    [SerializeField] private float moveSpeed;
     [SerializeField] private RectTransform maxParent, miniParent;
     [SerializeField] private Sprite mini, max;
-    [SerializeField] private float moveSpeed;
     private RectTransform rect;
     private bool sizeMini = true;
     #endregion
