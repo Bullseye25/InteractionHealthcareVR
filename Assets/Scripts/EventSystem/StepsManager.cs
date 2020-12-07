@@ -7,7 +7,7 @@ public class StepsManager : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private List<Step> steps = new List<Step>();
-    [SerializeField] private TextMeshPro description3DText;
+    //[SerializeField] private TextMeshPro description3DText;
 
     [Header("Settings")]
     [SerializeField] private bool autoStart = true;
@@ -16,8 +16,11 @@ public class StepsManager : MonoBehaviour
 
     public static StepsManager Instance;
 
+    [SerializeField] private bool grabActiveSteps;
+
     private void Awake()
     {
+        GrabActiveSteps();
         Instance = this;
     }
 
@@ -41,12 +44,12 @@ public class StepsManager : MonoBehaviour
             steps[currentStep].OnStepEnd?.Invoke();
 
         currentStep++;
-        Debug.LogWarning($"Current step is now Step {currentStep}.");
+        Debug.LogWarning($"Current step is now Step {steps[currentStep].gameObject.name}."); 
 
         if (currentStep < steps.Count)
         {
             steps[currentStep].OnStepStart?.Invoke();
-            description3DText.text = steps[currentStep].description;
+            //description3DText.text = steps[currentStep].description;
         }
     }
 
@@ -54,5 +57,17 @@ public class StepsManager : MonoBehaviour
     {
         currentStep = -1;
         NextStep();
+    }
+
+    private void GrabActiveSteps()
+    {
+        if(grabActiveSteps == true)
+        foreach(Transform child in transform)
+        {
+            if (child.gameObject.activeInHierarchy)
+            {
+                steps.Add(child.GetComponent<Step>());
+            }
+        }
     }
 }

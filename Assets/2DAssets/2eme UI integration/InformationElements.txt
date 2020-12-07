@@ -1,0 +1,21 @@
+Hover
+
+Tous les éléments clicables prennent comme couleur de fond #F5F5F5 en hover.
+
+Typographie
+
+La typographie utilisée pour les titres et les boutons principaux est la Rubik Bold.
+La typographie utilisée pour les éléments de textes et les boutons secondaire est la Work Sans.
+La couleur utilisée correspond au code hexadécimal suivant : #332661.
+Lorsque le fond de couleur est violet, le texte devient blanc.
+
+Couleurs
+
+Le violet utilisé correspond au code hexadécimal #332661.
+Le dégradé est créé à partir du violet #332661 et du rouge #ff0049.
+Le dégradé linéraire simple présente 80% de violet et 20% de rouge avec un angles de -30°.
+Un png de ce dernier est fournis également.
+
+Taille des Éléments
+
+Les bouton principaux doivent faire 9cm de hauteur et l'interface doit se trouver à 1.5m de l'utilisateur.

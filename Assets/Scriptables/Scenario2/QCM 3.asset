@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fc8defdd9bd4f14ebb6bacd278fdb27, type: 3}
+  m_Name: QCM 3
+  m_EditorClassIdentifier: 
+  questions:
+  - id: 0
+    question: Quel est votre diagnostic ?
+    answers:
+    - MVO
+    - "R\xE9action de greffon NEWLINE  contre l\u2019h\xF4te"
+    - "Toxicit\xE9 m\xE9dicamenteuse"
+    - Insuffisance cardiaque congestive
+    correctAnswer: 1
+    playerSelection: -1

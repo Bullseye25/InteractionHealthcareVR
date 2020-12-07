@@ -1,0 +1,215 @@
+{
+    "m_SelectedDeviceId": "FA014AZ00103",
+    "m_SelectedPackage": {
+        "deviceId": "FA014AZ00103",
+        "name": "com.sixfreedom.svodvrxp",
+        "processId": 5209,
+        "exited": false
+    },
+    "m_SelectedPriority": 0,
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "FA014AZ00103",
+            "name": "com.sixfreedom.svodvrxp",
+            "processId": 3100,
+            "exited": true
+        },
+        {
+            "deviceId": "FA014AZ00103",
+            "name": "com.sixfreedom.svodvrxp",
+            "processId": 5209,
+            "exited": false
+        },
+        {
+            "deviceId": "FA97JAZ00045",
+            "name": "com.sixfreedom.svodvrxp",
+            "processId": 5786,
+            "exited": true
+        },
+        {
+            "deviceId": "FA97JAZ00045",
+            "name": "com.sixfreedom.svodvrxp",
+            "processId": 7095,
+            "exited": true
+        },
+        {
+            "deviceId": "FA97JAZ00045",
+            "name": "com.sixfreedom.svodvrxp",
+            "processId": 9895,
+            "exited": true
+        },
+        {
+            "deviceId": "FA97JAZ00045",
+            "name": "com.sixfreedom.svodvrxp",
+            "processId": 11079,
+            "exited": true
+        },
+        {
+            "deviceId": "FA97JAZ00045",
+            "name": "com.sixfreedom.svodvrxp",
+            "processId": 11821,
+            "exited": true
+        },
+        {
+            "deviceId": "FA97JAZ00045",
+            "name": "com.sixfreedom.svodvrxp",
+            "processId": 15620,
+            "exited": false
+        },
+        {
+            "deviceId": "FA97JAZ00045",
+            "name": "com.sixfreedom.svodvrxp",
+            "processId": 23357,
+            "exited": false
+        },
+        {
+            "deviceId": "FA97JAZ00045",
+            "name": "com.sixfreedom.svodvrxp",
+            "processId": 26319,
+            "exited": false
+        },
+        {
+            "deviceId": "FA97JAZ00045",
+            "name": "com.sixfreedom.svodvrxp",
+            "processId": 28157,
+            "exited": false
+        },
+        {
+            "deviceId": "FA97JAZ00045",
+            "name": "com.sixfreedom.svodvrxp",
+            "processId": 29215,
+            "exited": false
+        },
+        {
+            "deviceId": "FA97JAZ00045",
+            "name": "com.sixfreedom.svodvrxp",
+            "processId": 32659,
+            "exited": false
+        },
+        {
+            "deviceId": "FA97JAZ00045",
+            "name": "com.sixfreedom.svodvrxp",
+            "processId": 1702,
+            "exited": false
+        },
+        {
+            "deviceId": "FA97JAZ00045",
+            "name": "com.sixfreedom.svodvrxp",
+            "processId": 5895,
+            "exited": false
+        },
+        {
+            "deviceId": "FA97JAZ00045",
+            "name": "com.sixfreedom.svodvrxp",
+            "processId": 6358,
+            "exited": false
+        },
+        {
+            "deviceId": "FA97JAZ00045",
+            "name": "com.sixfreedom.svodvrxp",
+            "processId": 8482,
+            "exited": false
+        },
+        {
+            "deviceId": "FA97JAZ00045",
+            "name": "com.sixfreedom.svodvrxp",
+            "processId": 10154,
+            "exited": false
+        },
+        {
+            "deviceId": "FA97JAZ00045",
+            "name": "com.sixfreedom.svodvrxp",
+            "processId": 11895,
+            "exited": false
+        },
+        {
+            "deviceId": "FA97JAZ00045",
+            "name": "com.sixfreedom.svodvrxp",
+            "processId": 13736,
+            "exited": false
+        },
+        {
+            "deviceId": "FA97JAZ00045",
+            "name": "com.sixfreedom.svodvrxp",
+            "processId": 15025,
+            "exited": false
+        },
+        {
+            "deviceId": "FA97JAZ00045",
+            "name": "com.sixfreedom.svodvrxp",
+            "processId": 16320,
+            "exited": false
+        },
+        {
+            "deviceId": "FA97JAZ00045",
+            "name": "com.sixfreedom.svodvrxp",
+            "processId": 20425,
+            "exited": false
+        },
+        {
+            "deviceId": "FA97JAZ00045",
+            "name": "com.sixfreedom.svodvrxp",
+            "processId": 21654,
+            "exited": false
+        },
+        {
+            "deviceId": "FA97JAZ00045",
+            "name": "com.sixfreedom.svodvrxp",
+            "processId": 23050,
+            "exited": false
+        }
+    ],
+    "m_Tags": {
+        "m_Entries": [
+            {
+                "m_Name": "Filter by all listed tags",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "No Filter",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Tag Control...",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Unity",
+                "m_Selected": true
+            },
+            {
+                "m_Name": "CRASH",
+                "m_Selected": true
+            }
+        ]
+    },
+    "m_MemoryViewerState": {
+        "MemoryWindowHeight": 255.0,
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "MemoryGroup": 1,
+        "Behavior": 1
+    },
+    "m_Filter": "",
+    "m_FilterIsRegularExpression": false,
+    "m_SymbolPaths": []
+}

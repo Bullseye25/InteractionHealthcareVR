@@ -22,7 +22,7 @@ namespace WVR_Log
 {
 	public class Log
 	{
-		public static bool EnableDebugLog = true;
+		public static bool EnableDebugLog = false;
 		private const int LOG_VERBOSE = 2;
 		private const int LOG_DEBUG = 3;
 		private const int LOG_INFO = 4;

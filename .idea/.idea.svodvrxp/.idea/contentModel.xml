@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\daxxa\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\daxxa\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_svodvrxp.1796134973.00" t="ExcludeRecursive" />
+    <e p="G:\6Freedom\svodvrxp" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="2DAssets" t="Include">
+          <e p="2eme UI integration" t="Include">
+            <e p="InformationElements.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Fonts" t="Include">
+          <e p="Rubik" t="Include">
+            <e p="OFL.txt" t="Include" />
+            <e p="readme.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Plugins" t="Include">
+          <e p="Demigiant" t="Include">
+            <e p="DemiLib" t="Include">
+              <e p="Core" t="Include">
+                <e p="DemiLib.xml" t="Include" />
+                <e p="Editor" t="Include">
+                  <e p="DemiEditor.xml" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="DOTween" t="Include">
+              <e p="Modules" t="Include">
+                <e p="DOTweenModuleAudio.cs" t="Include" />
+                <e p="DOTweenModulePhysics.cs" t="Include" />
+                <e p="DOTweenModulePhysics2D.cs" t="Include" />
+                <e p="DOTweenModuleSprite.cs" t="Include" />
+                <e p="DOTweenModuleUI.cs" t="Include" />
+                <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+                <e p="DOTweenModuleUtils.cs" t="Include" />
+              </e>
+              <e p="readme.txt" t="Include" />
+            </e>
+            <e p="DOTweenPro" t="Include">
+              <e p="DOTweenAnimation.cs" t="Include" />
+              <e p="DOTweenDeAudio.cs" t="Include" />
+              <e p="DOTweenDeUnityExtended.cs" t="Include" />
+              <e p="DOTweenProShortcuts.cs" t="Include" />
+              <e p="DOTweenTextMeshPro.cs" t="Include" />
+              <e p="DOTweenTk2d.cs" t="Include" />
+              <e p="Editor" t="Include">
+                <e p="DOTweenAnimationInspector.cs" t="Include" />
+                <e p="DOTweenPreviewManager.cs" t="Include" />
+              </e>
+              <e p="readme.txt" t="Include" />
+            </e>
+            <e p="readme_DOTweenPro.txt" t="Include" />
+          </e>
+        </e>
+        <e p="QuickOutline" t="Include">
+          <e p="readme.txt" t="Include" />
+          <e p="Resources" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="OutlineFill.shader" t="Include" />
+              <e p="OutlineMask.shader" t="Include" />
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="Outliner.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Salsa Lipsync" t="Include">
+          <e p="Crazy Minnow Studio" t="Include">
+            <e p="Examples" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="SALSA_Template_EventControllerSubscriber.cs" t="Include" />
+                <e p="SALSA_Template_SalsaEventSubscriber.cs" t="Include" />
+                <e p="SALSA_Template_SalsaVisemeTriggerEventSubscriber.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Plugins" t="Include">
+            <e p="Crazy Minnow Studio" t="Include">
+              <e p="Salsa Lipsync" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="OneClicks" t="Include">
+                    <e p="OneClickBoxHeadEditor.cs" t="Include" />
+                  </e>
+                  <e p="readme.txt" t="Include" />
+                  <e p="version.txt" t="Include" />
+                </e>
+                <e p="Plugins" t="Include">
+                  <e p="OneClickRuntimes" t="Include">
+                    <e p="OneClickBase.cs" t="Include" />
+                    <e p="OneClickBoxHead.cs" t="Include" />
+                    <e p="OneClickBoxHeadEyes.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="AppManager.cs" t="Include" />
+          <e p="AppReset.cs" t="Include" />
+          <e p="CustomeTimeline.cs" t="Include" />
+          <e p="Echography.Machine" t="Include">
+            <e p="PanelManager.cs" t="Include" />
+          </e>
+          <e p="EventSystem" t="Include">
+            <e p="AnimateIT.cs" t="Include" />
+            <e p="Fader.cs" t="Include" />
+            <e p="LocalPointReset.cs" t="Include" />
+            <e p="MoveTo.cs" t="Include" />
+            <e p="OnHit.cs" t="Include" />
+            <e p="StepManagerExt.cs" t="Include" />
+            <e p="StepsManager.cs" t="Include" />
+            <e p="WaitThenDo.cs" t="Include" />
+          </e>
+          <e p="GameManager.cs" t="Include" />
+          <e p="HandManager.cs" t="Include" />
+          <e p="Head.Movement" t="Include">
+            <e p="HeadMovement.cs" t="Include" />
+          </e>
+          <e p="Interactables" t="Include">
+            <e p="Interactable.cs" t="Include" />
+          </e>
+          <e p="MediaPlayer" t="Include">
+            <e p="AudioMediaPlayer.cs" t="Include" />
+            <e p="Interface" t="Include">
+              <e p="IMediaPlayer.cs" t="Include" />
+            </e>
+            <e p="VideoMediaPlayer.cs" t="Include" />
+          </e>
+          <e p="PopUpBehaviour" t="Include">
+            <e p="PopUpBehaviour.cs" t="Include" />
+          </e>
+          <e p="QCM" t="Include">
+            <e p="QCMCollection.cs" t="Include" />
+            <e p="QCMSystem.cs" t="Include" />
+            <e p="QCMSystemExt.cs" t="Include" />
+            <e p="QuestionEntity.cs" t="Include" />
+          </e>
+          <e p="QuickMenuManager" t="Include">
+            <e p="Option.cs" t="Include" />
+            <e p="QucikMenuManager.cs" t="Include" />
+          </e>
+          <e p="Reporter-Window" t="Include">
+            <e p="ReporterSystem.cs" t="Include" />
+          </e>
+          <e p="Step.cs" t="Include" />
+          <e p="Subtitle.cs" t="Include" />
+          <e p="TransitionManager.cs" t="Include" />
+        </e>
+        <e p="Shaders" t="Include">
+          <e p="Characters" t="Include">
+            <e p="ArnoCharactersMedium_Hair.shader" t="Include" />
+            <e p="ArnoCharactersPremiumDebug.shader" t="Include" />
+          </e>
+          <e p="Outline" t="Include">
+            <e p="Silhouette-Outlined Diffuse.shader" t="Include" />
+          </e>
+          <e p="RoomBakesAppareilEchographieA" t="Include">
+            <e p="Arno_Decor.shader" t="Include" />
+          </e>
+          <e p="SmartPhone" t="Include">
+            <e p="BasicMediumShader.shader" t="Include" />
+          </e>
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+            <e p="Shaders" t="Include">
+              <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+              <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+              <e p="TMP_Bitmap.shader" t="Include" />
+              <e p="TMP_SDF Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface.shader" t="Include" />
+              <e p="TMP_SDF.shader" t="Include" />
+              <e p="TMP_Sprite.shader" t="Include" />
+              <e p="TMPro.cginc" t="Include" />
+              <e p="TMPro_Properties.cginc" t="Include" />
+              <e p="TMPro_Surface.cginc" t="Include" />
+            </e>
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
+        </e>
+        <e p="WaveVR" t="Include">
+          <e p="Editor" t="Include">
+            <e p="ADBUtilities.cs" t="Include" />
+            <e p="AssetBundle" t="Include">
+              <e p="AssetBundleLoad.cs" t="Include" />
+            </e>
+            <e p="BuildCheck.cs" t="Include" />
+            <e p="CheckDirectPreviewOptions.cs" t="Include" />
+            <e p="DirectPreviewApk.cs" t="Include" />
+            <e p="StreamingServer.cs" t="Include" />
+            <e p="WaveEditorShaderStripping.cs" t="Include" />
+            <e p="WaveVR_Preferences.cs" t="Include" />
+            <e p="WaveVR_RenderBuildPreprocessor.cs" t="Include" />
+            <e p="WaveVR_RenderEditor.cs" t="Include" />
+            <e p="WaveVR_Settings.cs" t="Include" />
+            <e p="WaveVR_ShowIndicatorEditor.cs" t="Include" />
+          </e>
+          <e p="Extra" t="Include">
+            <e p="Beam.cs" t="Include" />
+            <e p="BundlePreview" t="Include">
+              <e p="Editor" t="Include">
+                <e p="BundlePreviewManager.cs" t="Include" />
+                <e p="BundlePreviewWindow.cs" t="Include" />
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="BundlePreviewLoader.cs" t="Include" />
+              </e>
+            </e>
+            <e p="commit_info.cs" t="Include" />
+            <e p="ControllerConnectionStateReactor.cs" t="Include" />
+            <e p="ControllerFadeManager.cs" t="Include" />
+            <e p="EventSystem" t="Include">
+              <e p="WaveVR_EventHandler.cs" t="Include" />
+              <e p="WaveVR_Raycast.cs" t="Include" />
+            </e>
+            <e p="FadeManger.cs" t="Include" />
+            <e p="FollowTransform.cs" t="Include" />
+            <e p="GazeInputModule.cs" t="Include" />
+            <e p="GOEventTrigger.cs" t="Include" />
+            <e p="IndicatorLine.cs" t="Include" />
+            <e p="QuaternionToEuler.cs" t="Include" />
+            <e p="QuitApplication.cs" t="Include" />
+            <e p="RingMeshDrawer.cs" t="Include" />
+            <e p="SimpleJSON.cs" t="Include" />
+            <e p="UniversalControllerActions.cs" t="Include" />
+            <e p="WaveVR_Resource.cs" t="Include" />
+          </e>
+          <e p="Font" t="Include">
+            <e p="Apache_License.txt" t="Include" />
+            <e p="NOTICE.txt" t="Include" />
+            <e p="WaveVR_Text.shader" t="Include" />
+          </e>
+          <e p="Platform" t="Include">
+            <e p="Android" t="Include">
+              <e p="AndroidManifest.xml" t="Include" />
+            </e>
+            <e p="WaveVR_Editor" t="Include">
+              <e p="WaveVR_UnityEditor.cs" t="Include" />
+            </e>
+            <e p="Windows" t="Include">
+              <e p="LICENSE_AMF.txt" t="Include" />
+              <e p="LICENSE_Live555.txt" t="Include" />
+              <e p="LICENSE_spdlog.txt" t="Include" />
+            </e>
+            <e p="wvr.cs" t="Include" />
+            <e p="WVR_Android.cs" t="Include" />
+            <e p="WVR_DirectPreview.cs" t="Include" />
+            <e p="WVR_Editor.cs" t="Include" />
+            <e p="WVR_HVR.cs" t="Include" />
+            <e p="WVR_Log.cs" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="AlwaysOnTopShader.shader" t="Include" />
+            <e p="BeamTransparent.shader" t="Include" />
+            <e p="WaveVR_ColorOffset.shader" t="Include" />
+            <e p="WaveVR_CtrlrPointer.shader" t="Include" />
+            <e p="WaveVR_Distortion.shader" t="Include" />
+            <e p="WaveVR_RenderMask.shader" t="Include" />
+            <e p="WaveVR_Reticle.shader" t="Include" />
+            <e p="WaveVRUnlitControllerShader.shader" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="Button" t="Include">
+              <e p="WaveVR_ButtonManager.cs" t="Include" />
+            </e>
+            <e p="ControllerModel" t="Include">
+              <e p="WaveVR_AdaptiveControllerActions.cs" t="Include" />
+              <e p="WaveVR_AutoLayout.cs" t="Include" />
+              <e p="WaveVR_ControllerInstanceManager.cs" t="Include" />
+              <e p="WaveVR_ControllerPointer.cs" t="Include" />
+              <e p="WaveVR_ControllerResourceHolder.cs" t="Include" />
+              <e p="WaveVR_ControllerRootToEmitter.cs" t="Include" />
+              <e p="WaveVR_RenderModel.cs" t="Include" />
+              <e p="WaveVR_ShowIndicator.cs" t="Include" />
+            </e>
+            <e p="EventSystem" t="Include">
+              <e p="IWaveVR_EventSystemHandler.cs" t="Include" />
+              <e p="WaveVR_AddEventSystemGUI.cs" t="Include" />
+              <e p="WaveVR_EventSystemControllerProvider.cs" t="Include" />
+              <e p="WaveVR_EventSystemGUIProvider.cs" t="Include" />
+              <e p="WaveVR_ExecuteEvents.cs" t="Include" />
+              <e p="WaveVR_GazeInputModule.cs" t="Include" />
+              <e p="WaveVR_InputModuleManager.cs" t="Include" />
+              <e p="WaveVR_RaycastResult.cs" t="Include" />
+              <e p="WaveVR_RaycastResultProvider.cs" t="Include" />
+              <e p="WaveVR_SetAsEventSystemController.cs" t="Include" />
+            </e>
+            <e p="Gesture" t="Include">
+              <e p="GUI" t="Include">
+                <e p="WaveVR_GestureBeam.cs" t="Include" />
+                <e p="WaveVR_GestureBeamProvider.cs" t="Include" />
+                <e p="WaveVR_GesturePointer.cs" t="Include" />
+                <e p="WaveVR_GesturePointerProvider.cs" t="Include" />
+                <e p="WaveVR_GestureReticle.cs" t="Include" />
+              </e>
+              <e p="InputModule" t="Include">
+                <e p="WaveVR_GestureInputModule.cs" t="Include" />
+                <e p="WaveVR_GesturePointerTracker.cs" t="Include" />
+              </e>
+              <e p="IWaveVR_BonePose.cs" t="Include" />
+              <e p="WaveVR_BonePose.cs" t="Include" />
+              <e p="WaveVR_BonePoseImpl.cs" t="Include" />
+              <e p="WaveVR_GestureManager.cs" t="Include" />
+            </e>
+            <e p="TrackingPose" t="Include">
+              <e p="WaveVR_ControllerPoseTracker.cs" t="Include" />
+              <e p="WaveVR_DevicePoseTracker.cs" t="Include" />
+              <e p="WaveVR_PoseSimulator.cs" t="Include" />
+              <e p="WaveVR_PoseTrackerManager.cs" t="Include" />
+            </e>
+            <e p="WaveVR.cs" t="Include" />
+            <e p="WaveVR_AdaptiveQuality.cs" t="Include" />
+            <e p="WaveVR_Beam.cs" t="Include" />
+            <e p="WaveVR_ButtonList.cs" t="Include" />
+            <e p="WaveVR_Camera.cs" t="Include" />
+            <e p="WaveVR_CameraTexture.cs" t="Include" />
+            <e p="WaveVR_CanvasEye.cs" t="Include" />
+            <e p="WaveVR_Controller.cs" t="Include" />
+            <e p="WaveVR_ControllerInputModule.cs" t="Include" />
+            <e p="WaveVR_ControllerListener.cs" t="Include" />
+            <e p="WaveVR_ControllerLoader.cs" t="Include" />
+            <e p="WaveVR_ControllerManager.cs" t="Include" />
+            <e p="WaveVR_Distortion.cs" t="Include" />
+            <e p="WaveVR_DynamicResolution.cs" t="Include" />
+            <e p="WaveVR_FoveatedRendering.cs" t="Include" />
+            <e p="WaveVR_FPS.cs" t="Include" />
+            <e p="WaveVR_IMEManager.cs" t="Include" />
+            <e p="WaveVR_IMEManagerWrapper.cs" t="Include" />
+            <e p="WaveVR_Init.cs" t="Include" />
+            <e p="WaveVR_Log.cs" t="Include" />
+            <e p="WaveVR_PermissionManager.cs" t="Include" />
+            <e p="WaveVR_PointerCameraTracker.cs" t="Include" />
+            <e p="WaveVR_Render.cs" t="Include" />
+            <e p="WaveVR_RenderMask.cs" t="Include" />
+            <e p="WaveVR_RenderThread.cs" t="Include" />
+            <e p="WaveVR_Reticle.cs" t="Include" />
+            <e p="WaveVR_Screenshot.cs" t="Include" />
+            <e p="WaveVR_TextureManager.cs" t="Include" />
+            <e p="WaveVR_TrackedButtons.cs" t="Include" />
+            <e p="WaveVR_TypeExtensions.cs" t="Include" />
+            <e p="WaveVR_UnityGL.cs" t="Include" />
+            <e p="WaveVR_Utils.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="svodvrxp.sln" t="IncludeFlat" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
